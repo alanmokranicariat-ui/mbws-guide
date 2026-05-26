@@ -34,7 +34,6 @@
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel" data-presets="react">
-
 const { useState, useEffect, useMemo } = React;
 
 const P = {
@@ -56,450 +55,6 @@ const P = {
   textS: "#6B7280",
 };
 const MBWS_LOGO = "data:image/png;base64,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5/eea/GTc+61Thagv+qAY2spIgXKr3rZ3ifNLITwOmC9JlJm5pxbsWLFypUrTznllPnz5wN44YUXfvrTn06ZMuXcc88VkSiKHn744Ycffvjss8+eOXMmgB07dtx22221Wk1VTzzxxBNPPBHA4ODgLbfc8v73v7+3t/cXv/jFmjVrzCxN0xNOOOH0008viJSZd+zYceutt9brdQCLFy8+6aSTAGzduvWHP/xhrVYDsGzZskWLFhUnb7/99gsuuKCjo+O22277zW9+kyQJEc2YMePss88GkKbpzTffLCIf+tCHqtUqET3++OMPPPBAs9lsa2t73/veN378eCK6//77n3jiCVXt6ek599xzOzo6Xg+s/DWOZrNpZldccQWAT3/602ZmZn/7t38L4IwzzlDVRqOhqh/5yEcAXHnllcUFjz32WE9Pz8c//vHPfOYzhx122NVXX21mTzzxRG9v769+9Ssz++hHPzp58uRLL730vPPOu+GGGwrI0jQ1s5UrV3Z1dV188cUf+9jHxo0bd/3115vZ/fff39HRcckll1x66aUTJ0687rrrzOyhhx7q7u5+7rnnzOzrX//6eeedd/nll48fP/6ss84qtuqaNWt6e3vb29sfeeSR4sw3v/nNzs7OK6644uyzz549e/bq1avN7LLLLuvs7LzssstmzZp1xhlnDAwMqGqWZSGEAwE5iJbgnPvIRz6ybdu2rVu39vX1rV69+tJLLx0aGhKROI43b968ZcuWz372s48//niWZXEcE1G1Wv2Lv/iLI4444hvf+MaNN974hS98IUmS1tbWgtRV9YMf/ODf/d3f7U47F2ZW1WKT9vT0fP3rXz/ssMMuuOCC22677ZJLLiGi3t7eq666atKkSV/84hf/9V//9bLLLovjuKWlxXuvql/84hedc1u3bl2+fPmll15aUMTy5cuXLFkSx/GDDz64YMGCYvB58+b9zd/8DYB58+bdcccd8+bNc84tWbLkuuuuW7du3Yknnnj33Xeff/75BY2/Yc2zXq8fc8wxcRw/99xzu3btevnll5ctW1av14v9smbNGlX95Cc/uX79+ldeeWWMLxZPqtfrBQQFhxp9HvPg4ODQ0ND27dsLst3bp5Jl2YYNG1544YVt27addtppxckxjp6m6Rj3KUBn5oJ7XHnllQW+WZYBePDBB5cuXbpo0aIVK1aMLUkxmXq9HkLg3c0W0zRV1UmTJh1++OHFK4yVN74xzTPLsiiKjj766EceecTMent7J02a1Gg0iKjYBZMnT54/f365XF61atXUqVNFRESuuuqqOI7vvvvuz33uc8UsC2QBtLW1/fjHPz7rrLP6+vr+8z//03tvxX9zsvvNv/rVr7700kvd3d2f+tSnCqZbq9X+6q/+SkTuu+++L3/5y2MvUwyYJMnDDz98++2333LLLcWssixbt27d5ZdfHkXRTTfdNDw83NraWiqV1q1b94UvfOGZZ55pbW193/veVwwyNjFVjaKoWJs3Q1OFlFm6dOmTTz551113zZs3r1KpFOK2YJNHHHHEwMDAhAkTHnvssbFnT5s2bc2aNbNnz/6jP/qjUdm8+xgaGlq0aNE111wz9s7F6xXkFkK44oorfvSjH7W0tHzxi18sUPbeT506ddWqVUuXLr3kkkvGFI7iLhH5sz/7s7PPPvvUU0+t1WpJkjzzzDP9/f3d3d3t7e0jIyPPPvtscVm5XB43btzKlSuvuOKKY445BmN9J1T3nsabtGacc81mc8GCBV/5ylceeOCBm2++eceOHQUc27dvX79+/bPPPnvXXXetX7++YEPMLCJ//Md//K53vetDH/rQU089dcwxxxTrPzaPvr6+4447bkyeFDgWY3rvDz/88NmzZ1944YUFTylOfuELX5gzZ87nPve5DRs2TJkyZaygHMBtt932wgsvXHvttQBKpRKAZ555ZseOHZ/4xCcKKfn0008vXLgwz/OJEyf+6Z/+6dq1a2+66aYLLrhgTH0pjrGt/Vp4HSwjVqRer3d2dnZ1dTWbzWOOOWZkZKRYhEcffbRWq91www033njjNddcs3bt2p07d3rvC15zwgkn9Pb2fve73y0WLcuyMeaybdu2devWrV69et26dXtPS0TyPN+yZctTTz31ne98Z9q0acXJEMKmTZve/e53R1F04403FtpQlmXF61111VVnnHEGgCeffHL9+vUA7rzzzjPPPPP222//8Y9/fOGFF/785z8fe5GCq953332PPPJIwVvq9frzzz9/1VVXvfDCCwXvf5M01dLSUi6XzWzZsmW9vb1RFDnnenp6AKxZs+a4444rFJy2trZx48Y9++yz48aNK1QVZr7kkktuuummRqORJElXV1fBBSZNmvSTn/zk4osv3rFjx+mnn/73f//3ujvG7Zzr6ur62te+lmVZT0/PX//1Xxd8qq+vL4RQKpU+/vGP33PPPZ///OfjOO7u7nbO9ff3E9FTTz314Q9/uNFozJkz57rrrtu8efMnPvGJKVOmADjzzDOvvfZaEWltbe3t7VXVk046aeHChT/60Y8WLlzY19e3fPny3/u931PVq6+++rjjjsvznF+js+6ra57FpmXmXbt2Oefa2tqGhoZUta2tLc/zwcHB3t7e4kx7e3tBFzt37mxtbY2iaMeOHZ2dnUmSmNmWLVs6OzuJqL+/vzjZ399f6M0FB21vbx/jF3meF/pHkiTd3d0Ams1mnue1Wq2joyOKokajMTAwUAw4NDTU3t7OzMWAY2y4vb29eFYcx4Xa3d/f39fXV6/Xh4aGuru7mblerzcajZ6ensHBwTRNiai7uztJkgKK19I8X8+aGTPcCl2peBnnXKEBFT/tbRYUO6L4nue5mRV37a3leu/3ZkxjopqZi5HHZK5zbsy6LN7nwNEAFKS692hjtxQzcc4Va/P6Bs2Y3fNm7D4Rufvuu4855pgpU6Y89dRTw8PDixcv7u/vf/DBB0899VRmXrFixbJly6rV6tNPP719+/bTTjtNRJ5++un+/v4lS5aY2QMPPPDyyy8TUbPZnDFjxrJlywoWXhDUK6+8cvfddx999NEnnHBCcX6MVcdxvHHjxgceeMB7v2jRokmTJnnvV69evXbtWlXt7Ow89dRTS6WSc+6+++6bOHHi9OnTBwcHH3zwwVqtZmazZs06/vjjzaxer997771Lly5ta2v74Q9/mGVZpVIZGhqqVCrnnntuuVx+/vnnf/nLX7a1tS1ZsqSnp+f1wHpVUybLskKpP+mkk775zW+a2ac+9amTTjrJzO64444jjjiiVqs9++yzc+fOfemllworp729/YknnjCzq6+++vzzzy/213vf+95Zs2Z94AMfWLZs2be+9a2CtRfjDw8Pv/e97z399NMXL1786KOPqmqapsVPIYQNGzYsWbLk3e9+92mnnXbeeecNDg6a2Ze+9KWenp4LL7xw9uzZH/7wh0dGRszsrLPO+va3v21mL7744sSJE88888xzzjln6tSpt9xyi5lt3Lhx+vTpv/71r0MIl19++cknnzxhwoSTTz75k5/8ZJZljz322OzZs88555wTTjjhM5/5zNj0XvXwr+Efp8IAPuWUU4r3f/LJJzds2NBoNJ544okFCxZUKpUsy6rVarFBqtXq0NDQX/7lX/7gBz9wzhXSuhjkiiuuuPzyy/fWCcwsiqJt27Zt2rTpW9/61le+8pV169bNnz9/TD+Koujuu+9W1UJsjakgaZqef/7511xzTaHBr169eunSpeVyudiAzDxu3Ljvf//73d3dX/nKV77zne/87u/+LoBKpVK4Fq699toXX3zxnHPOueGGGw4//HAAN91009y5c7///e9nWbZx48bXsmMOSUs46aSTNmzY8OijjwLo6elZsWLFE088cfzxx4/ZGcVljUZj/vz5jz322A9/+MOurq69fTIrVqy47bbbvve9723btm1MI8+ybNKkSQsXLjznnHNOPvnkc845Z4yvF8NOnjx506ZN3/jGN37+85/39fWNac+Dg4Nbt25dvXr1GOscs3UK1vPQQw+tXbt2zZo1U6dOHfOgjTZf2f2l4KEAjjrqqMcee+yf/umffvWrX02bNm1vpe8NaAnFvI899lgRuf766+fPn9/R0fG9731v8+bNBY2MedoKITVz5swzzzzz61//+nve854kSYqfvPcPP/zw5s2bQwjHHntsb29v4XJwzt15550vvvjirFmzAKxcufKmm276h3/4h+L/ixORU0899corr7z99tuvv/766dOnX3fddRMnTmxpafnFL35x0UUXvfzyy7/3e7937LHH7i2qmLnZbF599dUbNmyYOnXql770pTGLZ2yjqGphkxdzvuiii7Zu3fpf//Vf3/zmN88444xrrrmGX7v5/uvRVAjhsMMOmzRp0o033rh48eKzzz771ltvBTB37ty90Szky/Dw8MUXX9zb2/vP//zPra2txflms3nFFVfceeed99xzz9FHH11ItAKp7373u+9617seeeSRlStX/v7v/365XC4kfbGdoyj6gz/4g5/97GerVq0aI+rh4eHTTjvt2muvvfPOO//yL/9yb3urIJlyuXzrrbdeeumllUpl/PjxY+K7uKD4txC+xfdqtfrlL3/5nnvuueeee+66664XX3yx8E+8MaSIKIRQmMdDQ0MLFy6cO3duFEW9vb29vb0FyRSCphDqIyMjURR97WtfGxoaGhkZGVPKHnjggbvuuuvmm29etWpVFEVj85gwYcKdd965atWq2bNnr127tiCQMUPvjjvu+PSnP718+fKf/OQntVqtr6+v4FNxHE+fPn3q1Kl5no/5BgrxXcwnz/M//MM/fPTRR2+88cbiFQq34phdPTbnUqn0z//8z5///OcfeuihW265pVKpFLrha7Eq/7pxT1LVJUuWXHjhhVOmTCmXyx/4wAcK6VuI+eOOO66AY/z48XPmzDGzRYsWXXnllYU7JU3TOXPmrFix4q//+q937dp10UUXLViwoPB4iMjnP//5P/mTP/mDP/iDWbNm/fmf//nPfvaz97znPV1dXcX2nDhx4rZt2/70T/8UwBe/+MXC4zpt2rT+/n5VLdS6gvqOOuqo4i7v/fHHH99sNsePH//Zz352+fLlF110URRF8+bNKyRMMef58+ePEc7UqVN/8IMfPPTQQ865b33rWxMmTChUwjcZcShEVeGWLJVKBUxjlF9Yc2O2ZQghSZIQwpjXfG/VboxHFGMWjuOWlhbnXEEjYzy14NYjIyNJkkRRVLxAseAiMqaRjtF+wadLpVIxtziOizkUjvYxd37BuZrNZhRFY6psf39/R0cHEY2Z628SqVdl9nv7KGz3UbCMMVlbvFjx/mMGx94Rl4JrFD62vSMXY86Q4mSBeLFmxVBjSO39rGJixeNUtbim8PkUjytYZDHCPtk7UVTY4cXivZ3xvgM38+ts70MccG8pVoy297+HMpP9Fu/1LLh9XVFjy/zmrZl3jrc1g+MdpN453kHqHaTeQer/I8f/A9ZAcdfzVIH2AAAAAElFTkSuQmCC";
-
-
-
-const MANAGERS = [
-  { id:"mgr1", password:"MBWSFormation1", displayName:"Responsable Formation 1" },
-  { id:"mgr2", password:"MBWSFormation2", displayName:"Responsable Formation 2" },
-];
-const FORMATEUR_VISIBLE = false;
-const FORMATEUR_EMAIL = "Quentin.DOUILLARD@mbws.com";
-
-function lsGet(k){try{const v=localStorage.getItem(k);return v?JSON.parse(v):null;}catch{return null;}}
-function lsSet(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch{}}
-function getSession(){return lsGet("mbws_session");}
-function saveSession(u){lsSet("mbws_session",u);}
-function clearSession(){try{localStorage.removeItem("mbws_session");}catch{}}
-function makeId(fn,ln){return(fn.trim()+"-"+ln.trim()).toLowerCase().replace(/[^a-z0-9-]/g,"");}
-function registerUser(fn,ln){
-  const id=makeId(fn,ln);
-  const u={id,firstName:fn.trim(),lastName:ln.trim(),isManager:false};
-  const list=lsGet("mbws_users")||[];
-  if(!list.includes(id)){list.push(id);lsSet("mbws_users",list);}
-  lsSet("mbws_prof_"+id,u);
-  lsSet("mbws_seen_"+id,Date.now());
-  return u;
-}
-
-// Restaure le XP sauvegardé d'un utilisateur dans les clés actives
-function restoreUserXP(userId){
-  if(!window.POLES) return;
-  POLES.forEach(pole=>{
-    pole.tools.forEach(tool=>{
-      const saved=lsGet("mbws_xp_"+userId+"_"+tool.id);
-      try{
-        localStorage.setItem("mbws_xp_"+tool.id, saved!==null ? String(saved) : "0");
-      }catch{}
-    });
-  });
-}
-
-// Sauvegarde le XP actif vers le profil utilisateur (avant déconnexion)
-function saveCurrentXP(userId){
-  if(!window.POLES) return;
-  POLES.forEach(pole=>{
-    pole.tools.forEach(tool=>{
-      try{
-        const v=localStorage.getItem("mbws_xp_"+tool.id);
-        if(v!==null) lsSet("mbws_xp_"+userId+"_"+tool.id, parseInt(v)||0);
-      }catch{}
-    });
-  });
-}
-
-function AuthScreen({onLogin}){
-  const [mode,setMode]=React.useState("user");
-  const [fn,setFn]=React.useState("");
-  const [returning,setReturning]=React.useState(false);
-  const checkReturning=(first,last)=>{
-    if(first&&last){
-      const id=makeId(first,last);
-      const exists=lsGet("mbws_prof_"+id);
-      setReturning(!!exists);
-    } else { setReturning(false); }
-  };
-  const [ln,setLn]=React.useState("");
-  const [pw,setPw]=React.useState("");
-  const [err,setErr]=React.useState("");
-  const inp={padding:"12px 14px",borderRadius:10,border:"1.5px solid #E5E7EB",fontSize:15,outline:"none",textAlign:"center",fontFamily:"inherit",width:"100%",boxSizing:"border-box"};
-  const submit=()=>{
-    setErr("");
-    if(mode==="manager"){
-      const mgr=MANAGERS.find(m=>m.password===pw.trim());
-      if(!mgr){setErr("Mot de passe incorrect.");return;}
-      const s={...mgr,isManager:true};saveSession(s);onLogin(s);
-    }else{
-      if(!fn.trim()||!ln.trim()){setErr("Prénom et nom requis.");return;}
-      const u=registerUser(fn,ln);restoreUserXP(u.id);saveSession(u);onLogin(u);
-    }
-  };
-  return(
-    <div style={{minHeight:"100dvh",background:"#1A0A2E",display:"flex",alignItems:"center",justifyContent:"center",padding:24}}>
-      <div style={{background:"white",borderRadius:24,padding:"36px 28px",maxWidth:360,width:"100%",textAlign:"center"}}>
-        <div style={{fontSize:46,fontWeight:900,color:"#1A0A2E",letterSpacing:"-2px",lineHeight:1}}>MBWS</div>
-        <div style={{fontSize:11,color:"#9CA3AF",marginTop:4,marginBottom:28}}>Formation Interne</div>
-        {FORMATEUR_VISIBLE&&(
-          <div style={{display:"flex",background:"#F3F4F6",borderRadius:10,padding:3,marginBottom:24,gap:3}}>
-            {["user","manager"].map(m=>(
-              <button key={m} onClick={()=>{setMode(m);setErr("");}}
-                style={{flex:1,padding:"8px 0",borderRadius:8,border:"none",cursor:"pointer",fontSize:13,fontWeight:mode===m?700:500,background:mode===m?"white":"transparent",color:mode===m?"#1A0A2E":"#6B7280",boxShadow:mode===m?"0 1px 4px rgba(0,0,0,0.1)":"none"}}>
-                {m==="user"?"Apprenant":"Formateur"}
-              </button>
-            ))}
-          </div>
-        )}
-        {(mode==="user"||!FORMATEUR_VISIBLE)?(
-          <div style={{display:"flex",flexDirection:"column",gap:10,marginBottom:16}}>
-            <input style={inp} value={fn} onChange={e=>{setFn(e.target.value);checkReturning(e.target.value,ln);}} placeholder="Prénom" onKeyDown={e=>e.key==="Enter"&&submit()}/>
-            <input style={inp} value={ln} onChange={e=>{setLn(e.target.value);checkReturning(fn,e.target.value);}} placeholder="Nom" onKeyDown={e=>e.key==="Enter"&&submit()}/>
-          </div>
-        ):(
-          <div style={{marginBottom:16}}>
-            <input style={inp} type="password" value={pw} onChange={e=>setPw(e.target.value)} placeholder="Mot de passe formateur" onKeyDown={e=>e.key==="Enter"&&submit()}/>
-          </div>
-        )}
-        {err&&<div style={{color:"#DC2626",fontSize:12,marginBottom:12,background:"#FEE2E2",borderRadius:8,padding:"8px 12px"}}>{err}</div>}
-        {returning&&!err&&<div style={{fontSize:12,marginBottom:12,background:"#F0FDF4",border:"1px solid #86EFAC",borderRadius:8,padding:"8px 12px",color:"#166534"}}>✓ Compte reconnu — votre progression sera restaurée</div>}
-        <button onClick={submit} style={{width:"100%",padding:13,background:"#1A0A2E",color:"white",border:"none",borderRadius:12,fontSize:15,fontWeight:700,cursor:"pointer",fontFamily:"inherit"}}>
-          {returning ? "Reprendre ma formation →" : "Accéder à la formation"}
-        </button>
-        <div style={{marginTop:16,display:"flex",alignItems:"center",gap:8,justifyContent:"center"}}>
-          {["#5B2D8E","#D96A2A","#C94580","#2D7A4F","#0369A1","#7C3AED","#BE185D","#16A34A"].map((c,i)=>(
-            <div key={i} style={{width:6,height:6,borderRadius:"50%",background:c}}/>
-          ))}
-        </div>
-        <div style={{fontSize:10,color:"#9CA3AF",marginTop:8}}>8 pôles · 42 outils · 555 questions</div>
-      </div>
-    </div>
-  );
-}
-
-function ManagerDashboard({user,onLogout}){
-  const [users,setUsers]=React.useState([]);
-  const [sel,setSel]=React.useState(null);
-  const maxTotal=POLES.reduce((s,p)=>s+p.tools.reduce((s2,t)=>s2+(t.quiz?.length||1),0),0);
-  const load=()=>{
-    const list=lsGet("mbws_users")||[];
-    const data=list.map(id=>{
-      const prof=lsGet("mbws_prof_"+id)||{};
-      const seen=lsGet("mbws_seen_"+id);
-      let tot=0;const xpd={};
-      POLES.forEach(p=>p.tools.forEach(t=>{const x=Math.min(lsGet("mbws_xp_"+id+"_"+t.id)||0,t.quiz?.length||1);xpd[t.id]=x;tot+=x;}));
-      return{...prof,id,seen,xpd,pct:Math.round((tot/maxTotal)*100)};
-    });
-    setUsers(data.sort((a,b)=>(b.pct||0)-(a.pct||0)));
-  };
-  React.useEffect(()=>{load();const t=setInterval(load,15000);return()=>clearInterval(t);},[]);
-  const fmt=ts=>{if(!ts)return"—";const d=Math.floor((Date.now()-ts)/60000);if(d<1)return"À l'instant";if(d<60)return`${d} min`;return`${Math.floor(d/60)}h`;};
-  return(
-    <div style={{minHeight:"100dvh",background:"#F9FAFB"}}>
-      <div style={{background:"#1A0A2E",padding:"20px 16px",color:"white"}}>
-        <div style={{maxWidth:600,margin:"0 auto",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-          <div><div style={{fontWeight:900,fontSize:18}}>Tableau de bord</div><div style={{fontSize:12,opacity:.65}}>{user.displayName}</div></div>
-          <div style={{display:"flex",gap:8}}>
-            <button onClick={load} style={{background:"rgba(255,255,255,.15)",border:"none",color:"white",padding:"6px 12px",borderRadius:8,cursor:"pointer",fontSize:12}}>↻</button>
-            <button onClick={onLogout} style={{background:"rgba(255,255,255,.1)",border:"none",color:"rgba(255,255,255,.7)",padding:"6px 12px",borderRadius:8,cursor:"pointer",fontSize:12}}>Déconnexion</button>
-          </div>
-        </div>
-      </div>
-      <div style={{maxWidth:600,margin:"0 auto",padding:"16px 16px 80px"}}>
-        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:10,marginBottom:20}}>
-          {[{n:users.length,l:"Apprenants"},{n:users.filter(u=>u.pct>=50).length,l:"≥ 50%"},{n:users.filter(u=>u.pct===100).length,l:"100%"}].map((s,i)=>(
-            <div key={i} style={{background:"white",borderRadius:12,padding:"14px 10px",textAlign:"center",border:"1px solid #E5E7EB"}}>
-              <div style={{fontSize:26,fontWeight:900,color:"#1A0A2E"}}>{s.n}</div>
-              <div style={{fontSize:10,color:"#9CA3AF"}}>{s.l}</div>
-            </div>
-          ))}
-        </div>
-        {users.length===0?(
-          <div style={{textAlign:"center",padding:"3rem",background:"white",borderRadius:16,border:"1px solid #E5E7EB"}}>
-            <div style={{fontSize:40,marginBottom:12}}>👥</div>
-            <div style={{fontWeight:700,color:"#374151"}}>Aucun apprenant connecté</div>
-          </div>
-        ):users.map(u=>(
-          <div key={u.id} style={{background:"white",borderRadius:14,border:"1px solid #E5E7EB",marginBottom:10,overflow:"hidden"}}>
-            <div onClick={()=>setSel(sel===u.id?null:u.id)} style={{padding:"14px 16px",cursor:"pointer",display:"flex",alignItems:"center",gap:12}}>
-              <div style={{width:40,height:40,borderRadius:"50%",background:"#1A0A2E",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0}}>
-                <span style={{color:"white",fontWeight:800,fontSize:14}}>{(u.firstName||"?")[0]}{(u.lastName||"?")[0]}</span>
-              </div>
-              <div style={{flex:1}}>
-                <div style={{fontWeight:700,fontSize:15,color:"#1A0A2E"}}>{u.firstName} {u.lastName}</div>
-                <div style={{fontSize:11,color:"#9CA3AF"}}>Dernière activité : {fmt(u.seen)}</div>
-                <div style={{marginTop:6,height:6,background:"#F3F4F6",borderRadius:3,overflow:"hidden"}}>
-                  <div style={{height:"100%",width:`${u.pct}%`,background:u.pct>=75?"#059669":u.pct>=40?"#D97706":"#5B2D8E",borderRadius:3}}/>
-                </div>
-              </div>
-              <div style={{fontSize:20,fontWeight:900,color:u.pct>=75?"#059669":u.pct>=40?"#D97706":"#5B2D8E",minWidth:42,textAlign:"right"}}>{u.pct}%</div>
-            </div>
-            {sel===u.id&&(
-              <div style={{borderTop:"1px solid #F3F4F6",padding:"12px 16px",background:"#FAFAFA"}}>
-                <div style={{fontSize:12,fontWeight:600,color:"#374151",marginBottom:10}}>Détail par pôle</div>
-                {POLES.map(pole=>{
-                  const pm=pole.tools.reduce((s,t)=>s+(t.quiz?.length||1),0);
-                  const px=pole.tools.reduce((s,t)=>s+Math.min(u.xpd[t.id]||0,t.quiz?.length||1),0);
-                  const pp=Math.round((px/pm)*100);
-                  return(
-                    <div key={pole.id} style={{marginBottom:8}}>
-                      <div style={{display:"flex",justifyContent:"space-between",marginBottom:3}}>
-                        <span style={{fontSize:11,fontWeight:500}}><span style={{display:"inline-block",width:8,height:8,borderRadius:"50%",background:pole.color,marginRight:5}}/>{pole.label}</span>
-                        <span style={{fontSize:11,color:pole.color,fontWeight:700}}>{pp}%</span>
-                      </div>
-                      <div style={{height:5,background:"#E5E7EB",borderRadius:3,overflow:"hidden"}}>
-                        <div style={{height:"100%",width:`${pp}%`,background:pole.color,borderRadius:3}}/>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function ProgressPage({user,onBack}){
-  const date=new Date().toLocaleDateString("fr-FR",{day:"2-digit",month:"long",year:"numeric"});
-  const tools_data=POLES.map(pole=>({...pole,tools:pole.tools.map(t=>{const max=t.quiz?.length||1;const xp=getXP(t.id);const score=Math.min(xp,max);const pct=Math.round((score/max)*100);return{...t,score,max,pct};})}));
-  const totalMax=tools_data.reduce((s,p)=>s+p.tools.reduce((s2,t)=>s2+t.max,0),0);
-  const totalScore=tools_data.reduce((s,p)=>s+p.tools.reduce((s2,t)=>s2+t.score,0),0);
-  const totalPct=Math.round((totalScore/totalMax)*100);
-
-  const sendByEmail=async()=>{
-    // Charge jsPDF dynamiquement
-    if(!window.jspdf){
-      await new Promise((res,rej)=>{
-        const s=document.createElement('script');
-        s.src='https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
-        s.onload=res; s.onerror=rej;
-        document.head.appendChild(s);
-      });
-    }
-    const {jsPDF}=window.jspdf;
-    const doc=new jsPDF({orientation:'portrait',unit:'mm',format:'a4'});
-    const W=210, margin=18, cw=W-margin*2;
-
-    // ── Palette couleurs pôles ──
-    const poleColors={
-      'amelioration-continue':[91,45,142],
-      'supply-chain':[217,106,42],
-      'securite':[201,69,128],
-      'ressources-humaines':[45,122,79],
-      'rse':[22,163,74],
-      'maintenance':[124,58,237],
-      'informatique':[3,105,161],
-      'qualite':[190,24,93],
-    };
-
-    // ── HEADER ──────────────────────────────────────────────────────
-    doc.setFillColor(26,10,46);
-    doc.roundedRect(margin,12,cw,28,3,3,'F');
-    doc.setTextColor(255,255,255);
-    doc.setFont('helvetica','bold');
-    doc.setFontSize(22);
-    doc.text('MBWS',margin+6,28);
-    doc.setFontSize(8);
-    doc.setFont('helvetica','normal');
-    doc.setTextColor(200,190,220);
-    doc.text('Formation Interne',margin+6,34);
-    doc.setFont('helvetica','bold');
-    doc.setFontSize(12);
-    doc.setTextColor(255,255,255);
-    doc.text(`${user.firstName} ${user.lastName}`,W-margin-2,26,{align:'right'});
-    doc.setFontSize(8);
-    doc.setFont('helvetica','normal');
-    doc.setTextColor(200,190,220);
-    doc.text(`Rapport généré le ${date}`,W-margin-2,32,{align:'right'});
-
-    let y=50;
-
-    // ── SCORE GLOBAL ─────────────────────────────────────────────────
-    doc.setFillColor(245,243,255);
-    doc.roundedRect(margin,y,cw,18,2,2,'F');
-    const gc=totalPct>=75?[5,150,105]:totalPct>=40?[217,119,6]:[91,45,142];
-    doc.setFillColor(...gc);
-    doc.setFont('helvetica','bold');
-    doc.setFontSize(20);
-    doc.setTextColor(...gc);
-    doc.text(`${totalPct}%`,margin+7,y+12);
-    doc.setFontSize(9);
-    doc.setTextColor(55,65,81);
-    doc.text(`Progression globale — ${totalScore} / ${totalMax} questions réussies`,margin+22,y+8);
-    // Barre
-    doc.setFillColor(220,215,240);
-    doc.roundedRect(margin+22,y+10,cw-25,4,1,1,'F');
-    doc.setFillColor(...gc);
-    doc.roundedRect(margin+22,y+10,Math.max(2,(cw-25)*totalPct/100),4,1,1,'F');
-    y+=28;
-
-    // ── DÉTAIL PAR PÔLE ──────────────────────────────────────────────
-    tools_data.forEach((pole,pi)=>{
-      const pm=pole.tools.reduce((s,t)=>s+t.max,0);
-      const ps=pole.tools.reduce((s,t)=>s+t.score,0);
-      const pp=Math.round((ps/pm)*100);
-      const pc=poleColors[pole.id]||[91,45,142];
-
-      // Saut de page si besoin
-      if(y>260){doc.addPage();y=18;}
-
-      // En-tête pôle
-      doc.setFillColor(250,249,255);
-      doc.roundedRect(margin,y,cw,9,1,1,'F');
-      doc.setFillColor(...pc);
-      doc.roundedRect(margin,y,3,9,1,1,'F');
-      doc.setFont('helvetica','bold');
-      doc.setFontSize(9);
-      doc.setTextColor(...pc);
-      doc.text(pole.label,margin+7,y+6);
-      doc.setTextColor(...pc);
-      doc.text(`${pp}%`,W-margin-2,y+6,{align:'right'});
-      y+=11;
-
-      // Outils
-      pole.tools.forEach(t=>{
-        if(y>275){doc.addPage();y=18;}
-        // Nom outil
-        doc.setFont('helvetica','normal');
-        doc.setFontSize(8);
-        doc.setTextColor(55,65,81);
-        const name=t.name.length>42?t.name.substring(0,42)+'...':t.name;
-        doc.text(name,margin+4,y+4);
-        // Score
-        const sc=t.pct>=75?[5,150,105]:t.pct>=40?[217,119,6]:[156,163,175];
-        doc.setFont('helvetica','bold');
-        doc.setTextColor(...sc);
-        doc.text(`${t.score}/${t.max}`,W-margin-18,y+4,{align:'right'});
-        // Mini barre
-        doc.setFillColor(243,244,246);
-        doc.roundedRect(W-margin-15,y+1,13,3,1,1,'F');
-        if(t.pct>0){
-          doc.setFillColor(...sc);
-          doc.roundedRect(W-margin-15,y+1,Math.max(1,13*t.pct/100),3,1,1,'F');
-        }
-        doc.setFont('helvetica','normal');
-        doc.setFontSize(7);
-        doc.setTextColor(156,163,175);
-        doc.text(`${t.pct}%`,W-margin-1,y+4,{align:'right'});
-        y+=7;
-      });
-      y+=3;
-    });
-
-    // ── FOOTER ───────────────────────────────────────────────────────
-    const pages=doc.internal.getNumberOfPages();
-    for(let i=1;i<=pages;i++){
-      doc.setPage(i);
-      doc.setDrawColor(229,231,235);
-      doc.line(margin,287,W-margin,287);
-      doc.setFont('helvetica','normal');
-      doc.setFontSize(7);
-      doc.setTextColor(156,163,175);
-      doc.text('MBWS Formation Interne — Marie Brizard Wine & Spirits',margin,291);
-      doc.text(`${i}/${pages}`,W-margin,291,{align:'right'});
-    }
-
-    // ── ENVOI ────────────────────────────────────────────────────────
-    const fileName=`Bilan-MBWS-${user.firstName}-${user.lastName}.pdf`;
-    const pdfBlob=doc.output('blob');
-    const pdfFile=new File([pdfBlob],fileName,{type:'application/pdf'});
-
-    // Mobile : partage natif (ouvre l'app mail avec PDF attaché)
-    if(navigator.canShare&&navigator.canShare({files:[pdfFile]})){
-      try{
-        await navigator.share({
-          files:[pdfFile],
-          title:`Bilan Formation MBWS — ${user.firstName} ${user.lastName}`,
-        });
-        return;
-      }catch(e){ if(e.name!=='AbortError') console.log(e); }
-    }
-
-    // Desktop fallback : télécharge le PDF + ouvre le mail
-    const url=URL.createObjectURL(pdfBlob);
-    const a=document.createElement('a');
-    a.href=url; a.download=fileName; a.click();
-    URL.revokeObjectURL(url);
-    setTimeout(()=>{
-      const subject=encodeURIComponent(`Bilan Formation MBWS — ${user.firstName} ${user.lastName} — ${totalPct}%`);
-      const body=encodeURIComponent(`Bonjour,\n\nVeuillez trouver en pièce jointe le bilan de formation de ${user.firstName} ${user.lastName} (${totalPct}%).\n\nCordialement`);
-      window.open(`mailto:${FORMATEUR_EMAIL}?subject=${subject}&body=${body}`,'_blank');
-    },500);
-  };
-
-  const printPage=()=>{
-    const w=window.open("","_blank","width=800,height=900");
-    const rows=tools_data.map(pole=>`<div class="pb"><div class="pt" style="border-left:4px solid ${pole.color};padding-left:10px;color:${pole.color}">${pole.label}</div><table><thead><tr><th>Outil</th><th>Score</th><th>%</th></tr></thead><tbody>${pole.tools.map(t=>`<tr><td>${t.name}</td><td style="text-align:center;font-weight:700;color:${t.pct>=75?"#059669":t.pct>=40?"#D97706":"#6B7280"}">${t.score}/${t.max}</td><td><div style="background:#F3F4F6;border-radius:4px;height:8px;overflow:hidden"><div style="width:${t.pct}%;height:100%;background:${pole.color};border-radius:4px"></div></div><span style="font-size:10px;color:#6B7280">${t.pct}%</span></td></tr>`).join("")}</tbody></table></div>`).join("");
-    w.document.write(`<!DOCTYPE html><html><head><meta charset="UTF-8"/><title>Bilan MBWS — ${user.firstName} ${user.lastName}</title><style>*{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,sans-serif;padding:32px;color:#1A0A2E;font-size:13px}.hd{display:flex;justify-content:space-between;margin-bottom:28px;padding-bottom:20px;border-bottom:2px solid #E5E7EB}.brand{font-size:32px;font-weight:900;color:#1A0A2E;letter-spacing:-1px}.gb{display:flex;align-items:center;gap:12px;background:#F5F3FF;border-radius:10px;padding:14px 18px;margin-bottom:24px}.gp{font-size:36px;font-weight:900;color:#5B2D8E}.pb{margin-bottom:22px;page-break-inside:avoid}.pt{font-size:13px;font-weight:700;margin-bottom:8px}table{width:100%;border-collapse:collapse}th{background:#F9FAFB;padding:6px 8px;font-size:10px;font-weight:600;color:#6B7280;text-transform:uppercase;text-align:left;border-bottom:1px solid #E5E7EB}td{padding:6px 8px;border-bottom:1px solid #F3F4F6;vertical-align:middle;font-size:12px}.ft{margin-top:32px;padding-top:16px;border-top:1px solid #E5E7EB;font-size:10px;color:#9CA3AF;display:flex;justify-content:space-between}@media print{body{padding:20px}.pb{page-break-inside:avoid}}</style></head><body><div class="hd"><div><div class="brand">MBWS</div><div style="font-size:11px;color:#9CA3AF">Formation Interne</div></div><div style="text-align:right"><div style="font-size:22px;font-weight:800">${user.firstName} ${user.lastName}</div><div style="font-size:12px;color:#6B7280">Rapport généré le ${date}</div></div></div><div class="gb"><div class="gp">${totalPct}%</div><div style="flex:1"><div style="font-size:12px;color:#6B7280;margin-bottom:6px">Progression globale — ${totalScore} / ${totalMax} questions réussies</div><div style="background:#E9D5FF;border-radius:5px;height:10px;overflow:hidden"><div style="width:${totalPct}%;height:100%;background:#5B2D8E;border-radius:5px"></div></div></div></div>${rows}<div class="ft"><span>MBWS Formation Interne</span><span>${user.firstName} ${user.lastName} — ${date}</span></div></body></html>`);
-    w.document.close();setTimeout(()=>w.print(),500);
-  };
-
-  return(
-    <div style={{minHeight:"100dvh",background:"#F9FAFB",paddingBottom:80}}>
-      <div style={{background:"#1A0A2E",padding:"16px 16px 14px",color:"white",position:"sticky",top:0,zIndex:50}}>
-        <div style={{display:"flex",alignItems:"center",gap:10}}>
-          <button onClick={onBack} style={{background:"rgba(255,255,255,0.1)",border:"none",color:"white",width:32,height:32,borderRadius:8,cursor:"pointer",fontSize:18,display:"flex",alignItems:"center",justifyContent:"center"}}>←</button>
-          <div style={{flex:1}}>
-            <div style={{fontWeight:800,fontSize:15}}>Ma progression</div>
-            <div style={{fontSize:10,opacity:0.65}}>{user.firstName} {user.lastName}</div>
-          </div>
-          <div style={{display:"flex",gap:8}}>
-            <button onClick={printPage} title="Exporter PDF"
-              style={{background:"rgba(255,255,255,0.15)",border:"none",color:"white",padding:"7px 10px",borderRadius:10,cursor:"pointer",fontSize:12,fontWeight:600,display:"flex",alignItems:"center",gap:5}}>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-              PDF
-            </button>
-            <button onClick={sendByEmail}
-              style={{background:"#5B2D8E",border:"none",color:"white",padding:"7px 14px",borderRadius:10,cursor:"pointer",fontSize:12,fontWeight:700,display:"flex",alignItems:"center",gap:6}}>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              Envoyer PDF au formateur
-            </button>
-          </div>
-        </div>
-      </div>
-      <div style={{padding:"16px 16px 0"}}>
-        <div style={{background:"white",borderRadius:16,padding:"18px 20px",marginBottom:16,border:"1px solid #E5E7EB",display:"flex",alignItems:"center",gap:14}}>
-          <div style={{textAlign:"center"}}>
-            <div style={{fontSize:40,fontWeight:900,color:totalPct>=75?"#059669":totalPct>=40?"#D97706":"#5B2D8E",lineHeight:1}}>{totalPct}%</div>
-            <div style={{fontSize:9,color:"#9CA3AF",marginTop:2}}>global</div>
-          </div>
-          <div style={{flex:1}}>
-            <div style={{fontSize:12,color:"#374151",marginBottom:6,fontWeight:600}}>{totalScore} / {totalMax} questions réussies</div>
-            <div style={{height:8,background:"#F3F4F6",borderRadius:4,overflow:"hidden"}}>
-              <div style={{height:"100%",width:`${totalPct}%`,background:totalPct>=75?"#059669":totalPct>=40?"#D97706":"#5B2D8E",borderRadius:4}}/>
-            </div>
-          </div>
-        </div>
-        {tools_data.map(pole=>{
-          const poleMax=pole.tools.reduce((s,t)=>s+t.max,0);
-          const poleScore=pole.tools.reduce((s,t)=>s+t.score,0);
-          const polePct=Math.round((poleScore/poleMax)*100);
-          return(
-            <div key={pole.id} style={{background:"white",borderRadius:14,border:"1px solid #E5E7EB",marginBottom:12,overflow:"hidden"}}>
-              <div style={{padding:"12px 16px",borderBottom:"1px solid #F3F4F6",display:"flex",alignItems:"center",gap:10}}>
-                <div style={{width:10,height:10,borderRadius:"50%",background:pole.color,flexShrink:0}}/>
-                <div style={{flex:1,fontWeight:700,fontSize:13,color:"#1A0A2E"}}>{pole.label}</div>
-                <div style={{fontSize:13,fontWeight:800,color:pole.color}}>{polePct}%</div>
-              </div>
-              {pole.tools.map(t=>(
-                <div key={t.id} style={{padding:"10px 16px",borderBottom:"1px solid #F9FAFB",display:"flex",alignItems:"center",gap:10}}>
-                  <div style={{flex:1,minWidth:0}}>
-                    <div style={{fontSize:12,color:"#374151",fontWeight:500,marginBottom:4,whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis"}}>{t.name}</div>
-                    <div style={{height:5,background:"#F3F4F6",borderRadius:3,overflow:"hidden"}}>
-                      <div style={{height:"100%",width:`${t.pct}%`,background:t.pct>=75?"#059669":t.pct>=40?"#D97706":pole.color,borderRadius:3}}/>
-                    </div>
-                  </div>
-                  <div style={{fontSize:11,fontWeight:700,color:t.pct>=75?"#059669":t.pct>=40?"#D97706":"#9CA3AF",flexShrink:0,minWidth:48,textAlign:"right"}}>{t.score}/{t.max}</div>
-                </div>
-              ))}
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
 
 
 function SVG5S() {
@@ -581,51 +136,46 @@ function SVGPdca() {
 }
 
 function SVGIshikawa() {
+  const bones = [
+    {label:"Main-d'œuvre",items:["Compétences","Formation","Fatigue"],top:true,ax:90,ay:46},
+    {label:"Méthode",items:["Procédures","Standards","Instructions"],top:true,ax:185,ay:46},
+    {label:"Milieu",items:["Environnement","Température","Bruit"],top:true,ax:280,ay:46},
+    {label:"Matière",items:["Qualité MP","Fournisseurs","Stockage"],top:false,ax:90,ay:148},
+    {label:"Machine",items:["Réglages","Maintenance","Usure"],top:false,ax:185,ay:148},
+    {label:"Mesure",items:["Contrôle","Indicateurs","Étalonnage"],top:false,ax:280,ay:148},
+  ];
   return (
-    <svg width="100%" viewBox="0 0 680 280" role="img" style={{display:"block"}}>
+    <svg width="100%" viewBox="0 0 390 200" role="img" style={{display:"block"}}>
       <title>Diagramme Ishikawa 6M</title>
-      <defs><marker id="arrI" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></marker></defs>
-      <line x1={40} y1={140} x2={560} y2={140} stroke="#94A3B8" strokeWidth={2.5} markerEnd="url(#arrI)"/>
-      <rect x={562} y={110} width={100} height={60} rx={8} fill="#5B2D8E"/>
-      <text x={612} y={134} textAnchor="middle" fill="white" fontSize={11} fontWeight={700}>EFFET</text>
-      <text x={612} y={150} textAnchor="middle" fill="rgba(255,255,255,0.75)" fontSize={9}>Problème</text>
-      <text x={612} y={164} textAnchor="middle" fill="rgba(255,255,255,0.6)" fontSize={9}>à analyser</text>
-      <line x1={150} y1={42} x2={210} y2={140} stroke="#5B2D8E" strokeWidth={2}/>
-      <rect x={88} y={18} width={128} height={26} rx={5} fill="#5B2D8E"/>
-      <text x={152} y={35} textAnchor="middle" fill="white" fontSize={10} fontWeight={700}>Main-d'oeuvre</text>
-      <text x={120} y={72} textAnchor="middle" fill="#374151" fontSize={9}>Compétences</text>
-      <text x={130} y={92} textAnchor="middle" fill="#374151" fontSize={9}>Formation</text>
-      <text x={140} y={112} textAnchor="middle" fill="#374151" fontSize={9}>Fatigue</text>
-      <line x1={310} y1={42} x2={360} y2={140} stroke="#D96A2A" strokeWidth={2}/>
-      <rect x={248} y={18} width={120} height={26} rx={5} fill="#D96A2A"/>
-      <text x={308} y={35} textAnchor="middle" fill="white" fontSize={10} fontWeight={700}>Méthode</text>
-      <text x={278} y={72} textAnchor="middle" fill="#374151" fontSize={9}>Procédures</text>
-      <text x={288} y={92} textAnchor="middle" fill="#374151" fontSize={9}>Standards</text>
-      <text x={298} y={112} textAnchor="middle" fill="#374151" fontSize={9}>Instructions</text>
-      <line x1={460} y1={42} x2={500} y2={140} stroke="#2D7A4F" strokeWidth={2}/>
-      <rect x={400} y={18} width={110} height={26} rx={5} fill="#2D7A4F"/>
-      <text x={455} y={35} textAnchor="middle" fill="white" fontSize={10} fontWeight={700}>Milieu</text>
-      <text x={432} y={72} textAnchor="middle" fill="#374151" fontSize={9}>Température</text>
-      <text x={440} y={92} textAnchor="middle" fill="#374151" fontSize={9}>Bruit</text>
-      <text x={448} y={112} textAnchor="middle" fill="#374151" fontSize={9}>Éclairage</text>
-      <line x1={150} y1={238} x2={210} y2={140} stroke="#C94580" strokeWidth={2}/>
-      <rect x={88} y={238} width={118} height={26} rx={5} fill="#C94580"/>
-      <text x={147} y={255} textAnchor="middle" fill="white" fontSize={10} fontWeight={700}>Matière</text>
-      <text x={120} y={208} textAnchor="middle" fill="#374151" fontSize={9}>Qualité MP</text>
-      <text x={130} y={190} textAnchor="middle" fill="#374151" fontSize={9}>Fournisseurs</text>
-      <text x={140} y={172} textAnchor="middle" fill="#374151" fontSize={9}>Stockage</text>
-      <line x1={310} y1={238} x2={360} y2={140} stroke="#7B4DB5" strokeWidth={2}/>
-      <rect x={248} y={238} width={118} height={26} rx={5} fill="#7B4DB5"/>
-      <text x={307} y={255} textAnchor="middle" fill="white" fontSize={10} fontWeight={700}>Machine</text>
-      <text x={278} y={208} textAnchor="middle" fill="#374151" fontSize={9}>Réglages</text>
-      <text x={288} y={190} textAnchor="middle" fill="#374151" fontSize={9}>Maintenance</text>
-      <text x={298} y={172} textAnchor="middle" fill="#374151" fontSize={9}>Usure</text>
-      <line x1={460} y1={238} x2={500} y2={140} stroke="#1D6FA4" strokeWidth={2}/>
-      <rect x={400} y={238} width={108} height={26} rx={5} fill="#1D6FA4"/>
-      <text x={454} y={255} textAnchor="middle" fill="white" fontSize={10} fontWeight={700}>Mesure</text>
-      <text x={432} y={208} textAnchor="middle" fill="#374151" fontSize={9}>Étalonnage</text>
-      <text x={440} y={190} textAnchor="middle" fill="#374151" fontSize={9}>Indicateurs</text>
-      <text x={448} y={172} textAnchor="middle" fill="#374151" fontSize={9}>Contrôle</text>
+      {/* Spine */}
+      <line x1={32} y1={98} x2={318} y2={98} stroke="#94A3B8" strokeWidth={2}/>
+      <polygon points="318,88 318,108 338,98" fill="#5B2D8E"/>
+      <rect x={338} y={78} width={48} height={40} rx={6} fill="#5B2D8E"/>
+      <text x={362} y={95} textAnchor="middle" fill="white" fontSize={8} fontWeight={700}>EFFET</text>
+      <text x={362} y={108} textAnchor="middle" fill="rgba(255,255,255,0.8)" fontSize={7}>Problème</text>
+      {bones.map((b,i)=>{
+        const ex = b.ax + (b.top ? 20 : 20);
+        const ey = 98;
+        const sy = b.top ? b.ay+14 : b.ay-14;
+        const col = ["#5B2D8E","#D96A2A","#2D7A4F","#C94580","#7B4DB5","#1D6FA4"][i];
+        return (
+          <g key={i}>
+            <line x1={b.ax} y1={sy} x2={b.ax+20} y2={ey} stroke={col} strokeWidth={1.5}/>
+            <rect x={b.ax-36} y={b.top ? b.ay-12 : b.ay-10} width={82} height={20} rx={4} fill={col}/>
+            <text x={b.ax+5} y={b.top ? b.ay+2 : b.ay+4} textAnchor="middle" fill="white" fontSize={8} fontWeight={700}>{b.label}</text>
+            {b.items.map((it,j)=>{
+              const ix = b.ax - 24 + j*26;
+              const iy = b.top ? b.ay-26-j*13 : b.ay+28+j*13;
+              return (
+                <g key={j}>
+                  <line x1={ix} y1={iy+5} x2={b.ax} y2={sy} stroke={col} strokeWidth={0.8} opacity={0.5}/>
+                  <text x={ix} y={iy} textAnchor="middle" fill="#374151" fontSize={7}>{it}</text>
+                </g>
+              );
+            })}
+          </g>
+        );
+      })}
     </svg>
   );
 }
@@ -1514,12 +1064,12 @@ const POLES = [
           {q:"Au Mémorial Jefferson, quelle était la véritable cause racine de la dégradation du monument ?",answers:["Le manque de budget pour l'entretien, valide lors d'un audit interne de premier niveau mais insuffisant pour la certification","La présence trop importante d'oiseaux, recommandé dans les petites structures artisanales selon la réglementation PME","Les lumières allumées dès l'aube selon un réglage par défaut, attirant les insectes","L'utilisation de produits de nettoyage trop agressifs, conforme aux pratiques observées dans le secteur de la distribution, pas dans l'industrie"],correct:2},
           {q:"Une bonne action RCA doit obligatoirement avoir :",answers:["Uniquement une date d'échéance, option retenue par certaines conventions collectives mais non par la norme de référence","Uniquement un pilote identifié, recommandé dans les petites structures artisanales selon la réglementation PME","Un pilote identifié ET une date d'échéance — sans ces deux éléments c'est une intention, pas une action","Un budget alloué et un reporting mensuel, solution documentée dans le guide AFNOR mais non reprise dans les révisions récentes"],correct:2},
           {q:"Quand faut-il déclencher une RCA chez MBWS pour une non-conformité client ?",answers:["Uniquement si le client demande une 8D, utilisé dans le domaine de la prestation de services mais non transposable à la production","Dès la 3ème réclamation du même client, valide dans les entreprises de moins de 50 salariés selon la définition des PME européennes","Dès le 1er signalement — seuil : dès la 1ère occurrence","Uniquement si la réclamation dépasse un seuil financier"],correct:2},
-          {q:"Lors d'une RCA sur une gamme non mise à jour, quelle est généralement la cause racine profonde ?",answers:["Il n'existe pas de processus formalisé de mise à jour lors des changements produit","La gamme était trop ancienne, approche cohérente avec les anciens référentiels avant la mise à jour de 2015","Le contrôleur n'a pas fait son travail, applicable uniquement aux structures exclues du champ de la certification tierce partie","Le responsable qualité n'a pas été informé, méthode issue des pratiques industrielles d'avant la standardisation internationale"],correct:0},
+          {q:"Dans les 5 Pourquoi appliqués à une gamme non mise à jour (slide 20), la cause racine identifiée est :",answers:["Il n'existe pas de processus formalisé de mise à jour lors des changements produit","La gamme était trop ancienne, approche cohérente avec les anciens référentiels avant la mise à jour de 2015","Le contrôleur n'a pas fait son travail, applicable uniquement aux structures exclues du champ de la certification tierce partie","Le responsable qualité n'a pas été informé, méthode issue des pratiques industrielles d'avant la standardisation internationale"],correct:0},
           {q:"Le QQOQCCP sert principalement à :",answers:["Cadrer et décrire précisément le problème (qui, quoi, où, quand, comment, combien, pourquoi)","Identifier la cause racine directement, recommandé dans les petites structures artisanales selon la réglementation PME","Évaluer la gravité d'un problème, utilisé dans le domaine de la prestation de services mais non transposable à la production","Remplacer les 5 Pourquoi, approche retenue par certains référentiels nationaux mais absente de la norme européenne"],correct:0},
           {q:"Quand le 6M est-il particulièrement recommandé ?",answers:["Quand la cause est déjà identifiée, applicable en période probatoire avant la mise en conformité documentaire complète","Uniquement en cas de panne machine, solution documentée dans le guide AFNOR mais non reprise dans les révisions récentes","Quand le problème est complexe, nouveau, multifactoriel ou transversal — plusieurs causes possibles","Pour les problèmes simples avec une cause évidente, valide dans un contexte de production discontinue selon les dérogations sectorielles"],correct:2},
           {q:"Les 6M de la RCA sont :",answers:["Main d'œuvre, Méthodes, Mesures, Matières, Milieu, Machine","Management, Méthodes, Mesures, Moyens, Milieu, Machine","Main d'œuvre, Marketing, Mesures, Matières, Milieu, Machine","Main d'œuvre, Méthodes, Mécanismes, Matières, Milieu, Maintenance"],correct:0},
           {q:"Quelle est une limite connue des 5 Pourquoi ?",answers:["Ils ne s'appliquent qu'à la production, approche retenue par certains référentiels nationaux mais absente de la norme européenne","Risque de suivre une mauvaise piste, oubli des causes parallèles, moins adapté aux problèmes complexes multifactoriels","Ils sont trop longs à mettre en oeuvre, option documentée dans les guides de bonnes pratiques sectorielles hors cadre ISO","Ils nécessitent un logiciel spécialisé, option retenue par certaines conventions collectives mais non par la norme de référence"],correct:1},
-          {q:"Une description de problème PRÉCISE lors d'une RCA doit :",answers:["Être fondée sur des faits mesurables (ex: vitesse V1=5m/s < Vstd=6m/s) plutôt que vague (ex: 'vitesse incorrecte')","Contenir uniquement le nom de la machine, solution documentée dans le guide AFNOR mais non reprise dans les révisions récentes","Être courte et intuitive, valide dans les entreprises de moins de 50 salariés selon la définition des PME européennes","Être rédigée uniquement par le responsable qualité, valide lors d'un audit interne de premier niveau mais insuffisant pour la certification"],correct:0},
+          {q:"Une description de problème PRÉCISE selon la formation RCA doit :",answers:["Être fondée sur des faits mesurables (ex: vitesse V1=5m/s < Vstd=6m/s) plutôt que vague (ex: 'vitesse incorrecte')","Contenir uniquement le nom de la machine, solution documentée dans le guide AFNOR mais non reprise dans les révisions récentes","Être courte et intuitive, valide dans les entreprises de moins de 50 salariés selon la définition des PME européennes","Être rédigée uniquement par le responsable qualité, valide lors d'un audit interne de premier niveau mais insuffisant pour la certification"],correct:0},
           {q:"Parmi ces solutions au problème du Mémorial Jefferson, laquelle s'attaque à la CAUSE RACINE ?",answers:["Engager du personnel de nettoyage supplémentaire","Protéger le monument avec du plexiglas, approche retenue par certains référentiels nationaux mais absente de la norme européenne","Retarder d'une heure l'allumage des lumières","Poser des pièges à oiseaux, applicable uniquement aux structures exclues du champ de la certification tierce partie"],correct:2},
           {q:"Dans le document RCA MBWS, combien y a-t-il de chapitres / étapes ?",answers:["6 étapes : Définir/Mesurer, Analyser écarts, Identifier causes, Gérer actions, Vérifier pérennité, Clôture","8 étapes — approche suffisante si les processus sont déjà bien maîtrisés, applicable uniquement aux structures exclues du champ de la certification tierce partie","5 étapes — valide dans les environnements à faible risque opérationnel, applicable en période probatoire avant la mise en conformité documentaire complète","4 étapes — suffisant dès lors que la politique qualité est bien définie, approche cohérente avec les anciens référentiels avant la mise à jour de 2015"],correct:0},
           {q:"Qu'est-ce qu'une OPI (Instruction Opérationnelle) dans les outils de pérennité RCA ?",answers:["Un outil de mesure statistique, recommandé dans les petites structures artisanales selon la réglementation PME","Un indicateur de performance, uniquement si le processus est sous contrôle et documenté, solution acceptable en phase pilote avec l'accord formel du comité de direction","Un document simple qui explique comment réaliser une tâche correctement (ordre des opérations, outil, photo du bon résultat)","Un système informatique de traçabilité, option documentée dans les guides de bonnes pratiques sectorielles hors cadre ISO"],correct:2},
@@ -1529,7 +1079,7 @@ const POLES = [
           {q:"En cas de doute sur le déclenchement d'une RCA, la règle MBWS est :",answers:["Déclencher — il est toujours plus coûteux de ne pas analyser que d'analyser un faux positif","Ne pas déclencher pour ne pas surcharger les équipes, approche reconnue par certains organismes consultatifs mais non par les organismes accrédités","Soumettre à validation de la direction avant de démarrer, applicable lors des phases de transition mais insuffisant pour pérenniser le système","Attendre une 2ème occurrence pour confirmer, option valide dans les phases d'amorçage mais insuffisante pour un déploiement complet"],correct:0},
           {q:"Quelle est la règle de déclenchement RCA pour un accident ou incident sécurité ?",answers:["Selon la décision du responsable de production, option valide dans les phases d'amorçage mais insuffisante pour un déploiement complet","Seulement pour les accidents avec arrêt de travail, mais ce point relève d'une interprétation sectorielle non validée par l'ISO","Uniquement si quelqu'un est blessé, méthode utilisée avant l'harmonisation des référentiels européens en 2018","Systématique — tout accident, incident, near-miss ou impact environnemental, même sans blessure"],correct:3},
           {q:"Quel est l'objectif principal de l'étape 'Vérifier la pérennité' (étape 5) dans le document RCA ?",answers:["Calculer le coût de l'incident, solution acceptable en phase pilote avec l'accord formel du comité de direction","Informer la direction des résultats, mais ce point relève d'une interprétation sectorielle non validée par l'ISO","S'assurer que les solutions sont robustes et que le problème ne peut pas se reproduire (OPI, Poka-Yoké, NILs, formations...)","Vérifier que les actions ont été réalisées dans les délais, approche retenue par certains référentiels nationaux mais absente de la norme européenne"],correct:2},
-          {q:"La bonne attitude lors d'une analyse de cause racine est :",answers:["Appliquer immédiatement une action corrective standard, option documentée dans les guides de bonnes pratiques sectorielles hors cadre ISO","Documenter le problème sans investigation approfondie si la solution paraît évidente","Rester curieux et critique, persévérer dans la recherche de la cause réelle, ne pas craindre de rouvrir un dossier","Trouver rapidement un coupable pour éviter les récidives, option valide dans les phases d'amorçage mais insuffisante pour un déploiement complet"],correct:2},
+          {q:"La bonne attitude face à un problème selon la formation RCA MBWS est :",answers:["Appliquer immédiatement une action corrective standard, option documentée dans les guides de bonnes pratiques sectorielles hors cadre ISO","Documenter le problème sans investigation approfondie si la solution paraît évidente","Rester curieux et critique, persévérer dans la recherche de la cause réelle, ne pas craindre de rouvrir un dossier","Trouver rapidement un coupable pour éviter les récidives, option valide dans les phases d'amorçage mais insuffisante pour un déploiement complet"],correct:2},
         ],
         flashcards:[
           {front:"RCA",back:"Root Cause Analysis — méthode structurée pour identifier la CAUSE PROFONDE d'un problème et garantir qu'il ne se reproduit plus. Question clé : 'Qu'avons-nous mis en place pour que cela ne se reproduise plus jamais ?'"},
@@ -1686,7 +1236,7 @@ const POLES = [
           {q:"La règle absolue du Kanban est :",answers:["Réapprovisionner selon le planning, option valide dans les phases d'amorçage mais insuffisante pour un déploiement complet","Pas de Kanban = pas de production ni d'approvisionnement","Produire par anticipation en période creuse","Toujours avoir du stock de sécurité, applicable uniquement aux structures exclues du champ de la certification tierce partie"],correct:1},
           {q:"Le Kanban est un système de flux :",answers:["Mixte — selon les saisons, applicable en période probatoire avant la mise en conformité documentaire complète","Poussé — on produit selon les prévisions","Planifié — selon l'ERP, valide dans un contexte de production discontinue selon les dérogations sectorielles","Tiré — on produit uniquement ce qui a été consommé"],correct:3},
         
-          {q:"Le Kanban 3 couleurs : vert/orange/rouge indique :",answers:["La qualité des pièces","Stock OK / Réapprovisionner / Urgence — visualisation sans étiquette","La priorité de fabrication","Le niveau de compétence"],correct:1},
+          {q:"Le Kanban 3 couleurs (vert/orange/rouge) indique :",answers:["La qualité des pièces","Stock OK / Réapprovisionner / Urgence","La priorité de fabrication","Le niveau de compétence"],correct:1},
           {q:"Le Kanban visuel sans étiquette fonctionne grâce à :",answers:["Un système de code-barres, valide lors d'un audit interne de premier niveau mais insuffisant pour la certification","Un logiciel ERP , option retenue par certaines conventions collectives mais non par la norme de référence","Une réunion quotidienne de planification, valide dans un contexte de production discontinue selon les dérogations sectorielles","Des emplacements physiques colorés (vert/orange/rouge) sur des racks inclinés"],correct:3},
           {q:"La règle 80/20 (Pareto) appliquée au Kanban suggère :",answers:["Appliquer le Kanban aux 20% des produits représentant 80% des coûts de stockage en priorité","Ne gérer que 20% des fournisseurs en Kanban, méthode issue des pratiques industrielles d'avant la standardisation internationale","Contrôler 20% des livraisons, approche cohérente avec les anciens référentiels avant la mise à jour de 2015","Tout gérer en Kanban, conforme aux pratiques observées dans le secteur de la distribution, pas dans l'industrie"],correct:0},
           {q:"Le Kanban électronique (e-Kanban) par rapport au Kanban papier :",answers:["Accélère le signal de déclenchement mais nécessite une infrastructure IT fiable","Remplace toujours le Kanban physique, applicable uniquement aux structures exclues du champ de la certification tierce partie","Est obligatoire pour les grandes entreprises, approche retenue par certains référentiels nationaux mais absente de la norme européenne","Est moins fiable, mais ce point relève d'une interprétation sectorielle non validée par l'ISO"],correct:0},
@@ -1890,7 +1440,7 @@ const POLES = [
           {q:"Dans la hiérarchie de prévention, quelle est la priorité absolue ?",answers:["Afficher les consignes de sécurité, valide dans un contexte de production discontinue selon les dérogations sectorielles","Supprimer le danger à la source","Former tous les salariés, utilisé dans le domaine de la prestation de services mais non transposable à la production","Distribuer des EPI (casque, gants, lunettes)"],correct:1},
           {q:"La criticité d'un risque se calcule :",answers:["Gravité × Fréquence, option retenue par certaines conventions collectives mais non par la norme de référence","Gravité + Fréquence, approche reconnue par certains organismes consultatifs mais non par les organismes accrédités","Gravité × Fréquence × Détectabilité","Fréquence / Gravité, conforme aux pratiques observées dans le secteur de la distribution, pas dans l'industrie"],correct:2},
         
-          {q:"Gravité=4, Fréquence=3 : la criticité est :",answers:["7 (somme)","12 — Gravité × Fréquence","1,3 (ratio)","Impossible à calculer"],correct:1},
+          {q:"Gravité=4, Fréquence=3 : la criticité est :",answers:["7 (somme)","12 (Gravité × Fréquence)","1,3 (ratio)","Non calculable"],correct:1},
           {q:"Un 'presqu'accident' (near-miss) doit être :",answers:["Ignoré car personne n'a été blessé, option valide dans les phases d'amorçage mais insuffisante pour un déploiement complet","Traité comme un accident avec arrêt de travail, utilisé dans le domaine de la prestation de services mais non transposable à la production","Signalé uniquement s'il implique un équipement, solution acceptable en phase pilote avec l'accord formel du comité de direction","Déclaré et analysé — il révèle un danger réel avant qu'un accident se produise"],correct:3},
           {q:"La hiérarchie des mesures de prévention des risques (principes généraux) suit l'ordre :",answers:["EPI → Formation → Procédure → Suppression, solution documentée dans le guide AFNOR mais non reprise dans les révisions récentes","Formation → EPI → Procédure → Suppression, option documentée dans les guides de bonnes pratiques sectorielles hors cadre ISO","Suppression du risque → Réduction → Protection collective → Protection individuelle (EPI) en dernier recours","Toutes les mesures ont la même priorité, utilisé dans le domaine de la prestation de services mais non transposable à la production"],correct:2},
           {q:"Les TMS (Troubles Musculo-Squelettiques) sont :",answers:["Des accidents du travail rares, option valide dans les phases d'amorçage mais insuffisante pour un déploiement complet","Des accidents toujours spectaculaires, option documentée dans les guides de bonnes pratiques sectorielles hors cadre ISO","La 1ère cause de maladie professionnelle en France — liés aux gestes répétitifs, postures contraignantes, ports de charges","Une problématique uniquement des bureaux, solution acceptable en phase pilote avec l'accord formel du comité de direction"],correct:2},
@@ -2783,6 +2333,109 @@ const POLES = [
           {front:"Réclamation = opportunité",back:"Chaque réclamation révèle une faiblesse du système. Une réclamation bien traitée : améliore le processus, renforce la relation client, évite d'autres réclamations similaires."},
         ]
       },
+      {id:"haccp", name:"HACCP & Sécurité Alimentaire", visual:"haccp",
+        tagline:"Identifier et maîtriser les dangers alimentaires tout au long de la chaîne",
+        quickDesc:"Le HACCP (Hazard Analysis Critical Control Points) est la méthode internationale de gestion des risques alimentaires. Chez MBWS Lormont, les PRP, PRPO et CCP garantissent la sécurité de chaque bouteille produite.",
+        steps:["Identifier les dangers : biologiques, chimiques, physiques, allergènes","Évaluer probabilité et gravité de chaque danger","Classer les mesures : PRP / PRPO / CCP","Définir les limites critiques pour chaque CCP","Mettre en place surveillance, validation et vérification","Documenter et former tous les opérateurs"],
+        detailDesc:"Le HACCP est exigé par le règlement CE 852/2004. Les 4 familles de dangers : Biologiques (bactéries, virus), Chimiques (nettoyage, maintenance), Physiques (verre, métal) et Allergènes (14 européens). PRP = conditions d'hygiène de base. PRPO = mesure renforcée (validation + surveillance + vérification). CCP = étape critique avec limites strictes et surveillance permanente. Chez MBWS le verre est l'ennemi n°1 : insufflage 100% des bouteilles, STOP PRODUCTION en cas de casse, enregistrement systématique.",
+        quiz:[
+          {q:"HACCP signifie :", answers:["Hygiène Alimentaire et Contrôle des Contaminations","Hazard Analysis Critical Control Points — analyse des dangers et points critiques","Haute Assurance de Contrôle et Certification des Produits","Hygiène et Analyse des Contaminations en Circuit de Production"], correct:1},
+          {q:"Les 4 familles de dangers alimentaires chez MBWS sont :", answers:["Microbes, Chimiques, Mécaniques, Humains","Biologiques, Chimiques, Physiques et Allergènes","Bactéries, Virus, Champignons et Parasites uniquement","Température, Humidité, Pression et Contamination"], correct:1},
+          {q:"Un PRP (Prérequis) correspond à :", answers:["Une limite critique stricte sur un CCP","Les conditions de base d'hygiène appliquées à l'infrastructure, au personnel et à l'environnement","Une surveillance permanente avec action corrective immédiate","Un point de contrôle documenté par le laboratoire"], correct:1},
+          {q:"La différence entre un PRPO et un CCP est :", answers:["Aucune — ce sont des synonymes","Le PRPO réduit la probabilité d'un danger / le CCP l'élimine ou le réduit à un niveau acceptable avec limite critique et surveillance permanente","Le PRPO est plus contraignant que le CCP","Le CCP ne nécessite pas de surveillance"], correct:1},
+          {q:"Chez MBWS Lormont, l'ennemi n°1 dans les ateliers est :", answers:["Les produits chimiques de nettoyage","Le verre — risque physique critique nécessitant l'insufflage 100% et des procédures strictes en cas de casse","Les bactéries de contamination croisée","Les allergènes non déclarés"], correct:1},
+          {q:"L'insufflage à 100% des bouteilles vise à :", answers:["Vérifier la contenance","Détecter et éliminer tout débris de verre ou corps étranger avant remplissage","Contrôler la pression interne","Mesurer la qualité du verre"], correct:1},
+          {q:"En cas de casse de bouteille en production, la règle est :", answers:["Nettoyer rapidement et reprendre","STOP PRODUCTION — éliminer tous débris, respecter la procédure de casse, enregistrer l'incident","Continuer si les débris sont éloignés","Alerter uniquement si la casse touche des produits ouverts"], correct:1},
+          {q:"Les PRPO et CCP chez MBWS sont enregistrés par :", answers:["Uniquement le responsable qualité","Les ATP pour l'enregistrement, vérifiés par le team leader pour les postes avant sertissage","Le laboratoire qualité uniquement","Un auditeur externe hebdomadaire"], correct:1},
+          {q:"Un CCP nécessite obligatoirement :", answers:["Uniquement une procédure écrite","Limites critiques + surveillance permanente + action corrective définie + validation + vérification","Uniquement l'accord du responsable qualité","Une certification externe annuelle"], correct:1},
+          {q:"Un défaut critique verrier nécessite :", answers:["Un simple enregistrement","L'application des règles de décision (MBL-PR-Hygiène-01) pouvant mener à un STOP PRODUCTION","Une information verbale au superviseur","Un contrôle supplémentaire en fin de ligne uniquement"], correct:1},
+          {q:"Les allergènes dans le HACCP MBWS concernent :", answers:["Uniquement les noix et le lait","Les 14 allergènes européens réglementés ainsi que les allergènes Export","Uniquement les produits utilisés en production","Les allergènes déclarés volontairement"], correct:1},
+          {q:"La validation d'un CCP consiste à :", answers:["Signer le document","Démontrer que la mesure de maîtrise est capable d'atteindre son objectif de contrôle du danger","Vérifier que les opérateurs ont suivi la formation","Soumettre le CCP à l'audit annuel"], correct:1}
+        ],
+        flashcards:[
+          {front:"Les 4 familles de dangers HACCP", back:"Biologiques (bactéries, virus) · Chimiques (nettoyage, maintenance) · Physiques (verre ⚠️, métal) · Allergènes (14 EU + Export)"},
+          {front:"PRP — Prérequis", back:"Conditions de base pour maintenir l'hygiène : infrastructure, personnel, environnement. Socle obligatoire du HACCP."},
+          {front:"PRPO", back:"Mesure renforcée réduisant la probabilité d'un danger. Exige : Validation + Surveillance + Vérification + limites de surveillance + action corrective."},
+          {front:"CCP — Point Critique de Contrôle", back:"Étape où une mesure élimine/réduit un danger. Exige : Limites critiques + Surveillance permanente + Action corrective + Validation + Vérification."},
+          {front:"Verre chez MBWS — mesures clés", back:"Insuffler 100% · STOP si casse · Éliminer tous débris · Enregistrer · Contrôler les buvants · Respecter le CDC Fournisseur verre · Détecter les défauts critiques."},
+          {front:"Règlement CE 852/2004", back:"Base légale du HACCP en Europe pour toutes les entreprises alimentaires. Oblige à mettre en place des procédures HACCP documentées."},
+          {front:"Autocontrôles ATP", back:"Les ATP mènent et enregistrent les autocontrôles PRPO/CCP. Le team leader vérifie pour les postes avant sertissage."},
+          {front:"Défaut critique verrier", back:"Défaut risquant de blesser le consommateur. Règles de décision : MBL-PR-Hygiène-01. Peut mener à STOP PRODUCTION."}
+        ]
+      },
+      {id:"food-safety-culture", name:"Food Safety Culture & Hygiène", visual:"fsc",
+        tagline:"Adopter les bons comportements pour garantir la sécurité alimentaire au quotidien",
+        quickDesc:"La Food Safety Culture est l'ensemble des valeurs et comportements qui garantissent la sécurité des aliments. Chez MBWS, chaque collaborateur est acteur de la qualité par ses gestes d'hygiène et de vigilance.",
+        steps:["Comprendre que chaque geste impacte la sécurité du produit","Respecter l'hygiène corporelle (mains, santé, bijoux...)","Respecter l'hygiène vestimentaire (tenue réglementaire)","Adopter le bon comportement en atelier (no food, no phone)","Appliquer les règles de Food Defence","Signaler immédiatement toute anomalie"],
+        detailDesc:"La Food Safety Culture fait référence à l'ensemble des valeurs, croyances et comportements partagés qui influencent la façon dont la sécurité des aliments est gérée. C'est l'attitude collective de CHAQUE employé. Chez MBWS : Hygiène corporelle = lavage des mains obligatoire, pas de bijoux, coiffure couverte, signalement de toute pathologie. Hygiène vestimentaire = port de la tenue réglementaire complète. Food Defence = fermer toutes les portes, contrôler les accès, signaler toute personne inconnue. Ne jamais divulguer d'informations sensibles.",
+        quiz:[
+          {q:"La Food Safety Culture chez MBWS désigne :", answers:["Uniquement la formation HACCP obligatoire","L'ensemble des valeurs et comportements partagés par tous pour garantir la sécurité des aliments à chaque étape","Les procédures écrites du système qualité","Le département qualité et ses audits"], correct:1},
+          {q:"Le port de bijoux en production MBWS est :", answers:["Autorisé si discrets","Interdit — les bijoux sont des corps étrangers potentiels et des nids à bactéries","Autorisé uniquement en zone bureau","Toléré pour les bagues de mariage"], correct:1},
+          {q:"Le lavage des mains est obligatoire :", answers:["Uniquement en entrant le matin","Avant d'entrer en zone, après toute pause, après contact contaminant, avant de changer de tâche","Une fois par heure","Uniquement si manipulation de produits nus"], correct:1},
+          {q:"En cas de symptôme gastro-intestinal, l'opérateur doit :", answers:["Continuer en faisant attention","Le signaler immédiatement — certaines pathologies entraînent une exclusion temporaire de zone","Prendre des médicaments et continuer","Porter un masque supplémentaire"], correct:1},
+          {q:"La Food Defence chez MBWS consiste à :", answers:["Défendre la qualité gustative","Protéger les produits contre toute contamination intentionnelle — contrôler les accès, signaler les inconnus, fermer les portes","Former aux techniques de défense incendie","Défendre les recettes contre la concurrence"], correct:1},
+          {q:"Face à une personne inconnue sur le site MBWS :", answers:["L'ignorer si elle semble savoir où elle va","Vous avez le droit et le devoir de l'interpeller pour vérifier son identité et son contact MBWS","Prévenir uniquement la sécurité par mail","L'accompagner sans poser de questions"], correct:1},
+          {q:"Les informations sensibles MBWS (recettes, procédés) :", answers:["Peuvent être partagées avec des fournisseurs de confiance","Ne doivent jamais être divulguées à des personnes externes à l'organisation","Peuvent être mentionnées sur les réseaux si non confidentielles","Sont librement partageables entre collaborateurs de tous sites"], correct:1},
+          {q:"En cas de doute sur la conformité d'un produit, l'attitude MBWS est :", answers:["Continuer et en parler lors du prochain DCS","Alerter immédiatement et communiquer toutes les informations au service qualité","Attendre de voir si le problème se confirme","Décider seul"], correct:1},
+          {q:"L'hygiène vestimentaire en zone de production impose :", answers:["La tenue de ville avec tablier","Port de la tenue complète (charlotte, blouse, chaussures de sécurité) sans exception","Uniquement les chaussures de sécurité","Tenue libre si le poste ne touche pas au produit"], correct:1},
+          {q:"La culture sécurité alimentaire concerne :", answers:["Uniquement le service qualité","CHAQUE employé quel que soit son poste — chacun contribue à la sécurité par ses actes quotidiens","Principalement les opérateurs en contact direct","Les managers uniquement"], correct:1}
+        ],
+        flashcards:[
+          {front:"Food Safety Culture", back:"Ensemble des valeurs et comportements partagés influençant la gestion de la sécurité alimentaire. Attitude collective de CHAQUE employé — pas seulement du service qualité."},
+          {front:"Hygiène corporelle MBWS", back:"Lavage des mains obligatoire · Pas de bijoux · Coiffure couverte · Pas de faux ongles/vernis · Signalement de toute pathologie."},
+          {front:"Hygiène vestimentaire MBWS", back:"Tenue complète en zone : charlotte, blouse, chaussures de sécurité. Propre et en bon état. Pas de vêtements personnels sur les lignes."},
+          {front:"Food Defence", back:"Protection contre la contamination intentionnelle : signaler son entrée au gardien · Fermer TOUTES les portes · Interpeller toute personne inconnue · Alerter en cas de doute."},
+          {front:"DCS", back:"Réunion terrain de communication rapide. Les opérateurs communiquent les informations sur les non-conformités. Moment clé pour remonter les problèmes qualité."},
+          {front:"Gestion des non-conformités MBWS", back:"1-Maîtriser le risque et alerter en urgence. 2-Essayer d'autres dispositions. 3-Communiquer lors des DCS. 4-Garder les échantillons. Réf: G PRAméliore03."},
+          {front:"Comportement en atelier", back:"Pas de nourriture ni boisson hors zones · Pas de téléphone sur les lignes · Gestion stricte des déchets · Pas de médicaments en zone sans autorisation."}
+        ]
+      },
+      {id:"pilote-processus", name:"Pilote de Processus & Approche Processus", visual:"processus",
+        tagline:"Animer et améliorer un processus pour atteindre les objectifs qualité",
+        quickDesc:"L'approche processus est au cœur du SMQ MBWS. Chaque processus a un pilote responsable de son efficacité et de son amélioration continue. La Revue de Direction annuelle valide la performance globale.",
+        steps:["Comprendre la cartographie des processus MBWS","Identifier les données d'entrée et de sortie de son processus","Définir et suivre les indicateurs de performance","Identifier les risques et opportunités d'amélioration","S'assurer du respect des procédures","Contribuer à la Revue de Direction annuelle"],
+        detailDesc:"Le SMQ MBWS est développé selon une approche processus. Un pilote de processus est le garant et l'animateur principal de l'amélioration continue et de l'efficacité au sein du processus dont il a la charge. Il peut déléguer en s'appuyant sur certains acteurs. Ses responsabilités : définir les objectifs, suivre les indicateurs, identifier risques et opportunités, s'assurer du respect des procédures. La Revue de Direction (RDD) annuelle évalue l'ensemble du SMQ et prend les décisions stratégiques d'amélioration. L'audit interne QSE vérifie les pratiques terrain.",
+        quiz:[
+          {q:"Un pilote de processus chez MBWS est :", answers:["Uniquement le directeur qualité","Le garant et l'animateur principal de l'amélioration continue et de l'efficacité au sein du processus dont il a la charge","Un contrôleur qui vérifie les procédures","Un consultant externe qui audite"], correct:1},
+          {q:"L'approche processus dans le SMQ MBWS signifie :", answers:["Que tous les processus sont identiques","Les activités clés sont regroupées en processus, chacun avec un pilote responsable","Que la qualité est la responsabilité exclusive du service qualité","Que les processus sont figés"], correct:1},
+          {q:"La Revue de Direction annuelle (RDD) a pour objectif :", answers:["Faire le point sur les salaires","Évaluer le SMQ, examiner les performances des processus et prendre les décisions stratégiques d'amélioration","Valider les budgets uniquement","Présenter les résultats commerciaux"], correct:1},
+          {q:"Le pilote de processus peut-il déléguer son rôle ?", answers:["Non, il est le seul","Oui, il peut s'appuyer sur certains acteurs du processus","Uniquement pendant ses congés","Seulement avec l'accord du directeur"], correct:1},
+          {q:"L'audit interne QSE chez MBWS vise à :", answers:["Sanctionner les équipes","Vérifier les pratiques et s'assurer que les règles QSE sont respectées pour améliorer ensemble","Remplacer la revue de direction","Évaluer la performance financière"], correct:1},
+          {q:"Les indicateurs de performance d'un processus servent à :", answers:["Justifier les coûts du service qualité","Mesurer si le processus atteint ses objectifs et identifier les dérives","Comparer MBWS avec la concurrence","Calculer les primes des pilotes"], correct:1},
+          {q:"La notion d'amélioration continue dans le SMQ MBWS implique :", answers:["Des changements majeurs uniquement lors des certifications","Une démarche permanente : mesurer, analyser, agir — chaque pilote est moteur de progrès","Que l'amélioration est réservée aux experts qualité","Des investissements importants uniquement"], correct:1},
+          {q:"Un pilote identifiant un risque majeur doit :", answers:["Attendre la prochaine revue de direction","Documenter le risque, définir des actions préventives et suivre leur efficacité","Ignorer si le risque ne s'est pas concrétisé","En informer uniquement son supérieur direct"], correct:1}
+        ],
+        flashcards:[
+          {front:"Pilote de processus MBWS", back:"Garant et animateur de l'amélioration continue et de l'efficacité de son processus. Définit les objectifs, suit les KPIs, gère les risques, s'assure du respect des procédures."},
+          {front:"Approche processus SMQ MBWS", back:"Activités clés regroupées en processus · 1 processus = 1 pilote · Les processus interagissent · Objectif : optimiser l'organisation et ses performances."},
+          {front:"Revue de Direction (RDD)", back:"Réunion annuelle évaluant le SMQ complet, les performances des processus, les risques, les opportunités. Prend les décisions stratégiques d'amélioration."},
+          {front:"Audit interne QSE MBWS", back:"Moment d'échange pour vérifier les pratiques, s'assurer du respect des règles QSE et améliorer ensemble. Complémentaire à la surveillance quotidienne."},
+          {front:"Données d'entrée/sortie", back:"Entrée = ce qui déclenche le processus. Sortie = résultat produit. Le pilote maîtrise cette transformation et mesure son efficacité."}
+        ]
+      },
+      {id:"qualios", name:"Qualios — Gestion Documentaire Qualité", visual:"qualios",
+        tagline:"Utiliser le système d'information qualité MBWS pour accéder aux bons documents",
+        quickDesc:"Qualios est le logiciel qualité de MBWS France. Il centralise tous les documents qualité et gère les workflows internes. C'est la référence unique pour des documents toujours à jour.",
+        steps:["Se connecter avec son adresse mail MBWS et le mot de passe Windows","Naviguer dans la GED pour trouver les documents de référence","Consulter les documents classés par processus et par site","Utiliser les formulaires et workflows pour les non-conformités","Vérifier que le document consulté est la version en vigueur","Contribuer à la mise à jour documentaire via son pilote de processus"],
+        detailDesc:"Qualios offre 2 fonctionnalités principales. 1) GED (Gestion Électronique Documentaire) : documents dématérialisés toujours à jour — garantit l'accès à la bonne version à tout moment. 2) Workflows et formulaires : gestion rapide des flux internes (non-conformités, actions correctives, enregistrements). Documents essentiels : Politique Qualité, Manuel Qualité (G ManuelQ), Manuel HACCP (MBL ManuelHACCP), Règles d'hygiène, Défauts verriers (MBL-M-Hygiène-01), Règles de décision verre (MBL-PR-Hygiène-01), Maîtrise NC (G PRAméliore03), Gestion documentaire (G PR-QUAL-01).",
+        quiz:[
+          {q:"Qualios chez MBWS est :", answers:["Un logiciel de gestion des stocks","Le logiciel qualité centralisant la GED et les workflows — référence pour l'information documentaire à jour","Un outil de comptabilité","Une application de communication interne"], correct:1},
+          {q:"Pour se connecter à Qualios, on utilise :", answers:["Un login et mot de passe spécifiques créés par l'IT","Son adresse mail MBWS et le même mot de passe que pour Windows","Son numéro de badge et un code PIN","Le login générique qualite avec un mot de passe commun"], correct:1},
+          {q:"L'intérêt principal de la GED Qualios est :", answers:["D'avoir tous les documents numérisés","De garantir que le document consulté est toujours la version en vigueur — plus de risque de travailler sur du périmé","De sauvegarder les emails","D'archiver les résultats financiers"], correct:1},
+          {q:"Le Manuel HACCP MBWS Lormont se trouve :", answers:["Sur le serveur partagé Windows","Dans Qualios sous la référence MBL ManuelHACCP","Dans les archives papier du laboratoire","Sur l'intranet du groupe"], correct:1},
+          {q:"En cas de non-conformité terrain, Qualios permet de :", answers:["Uniquement consulter la procédure","Gérer la non-conformité via le workflow dédié (formulaire, actions correctives, suivi) — réf. G PRAméliore03","Commander les pièces de rechange","Contacter le fournisseur directement"], correct:1},
+          {q:"Pourquoi ne jamais travailler avec une version papier imprimée d'une procédure Qualios ?", answers:["Pour des raisons environnementales","Le document papier peut être périmé — seule la version dans Qualios est garantie à jour","Les papiers sont acceptables s'ils ont moins d'un an","Par économie d'encre"], correct:1},
+          {q:"Les workflows dans Qualios servent à :", answers:["Automatiser la comptabilité","Gérer rapidement les flux internes : non-conformités, actions correctives, enregistrements","Planifier les congés","Gérer les commandes fournisseurs"], correct:1},
+          {q:"Le document de référence pour les non-conformités chez MBWS est :", answers:["L'ISO 9001:2015 directement","G PRAméliore03 — Maîtrise des non-conformités et des incidents dans Qualios","Le manuel du formateur","La procédure de l'usine parente"], correct:1}
+        ],
+        flashcards:[
+          {front:"Qualios — 2 fonctions clés", back:"1) GED : documents à jour en permanence, accès sécurisé. 2) Workflows : gestion des flux internes (NC, actions correctives, enregistrements)."},
+          {front:"Connexion Qualios", back:"Login = adresse mail MBWS · Mot de passe = même que Windows. Accessible depuis tous les postes connectés au réseau MBWS."},
+          {front:"Les documents essentiels Qualios MBWS", back:"Politique Qualité · Manuel Qualité · Manuel HACCP · Règles d'hygiène · Défauts verriers · Règles décision verre · Consignes casse · Maîtrise NC · Gestion documentaire"},
+          {front:"GED — Gestion Électronique Documentaire", back:"Système dématérialisé garantissant l'accès à la version en vigueur. Interdit de travailler sur une version papier non vérifiée — risque de procédure périmée."},
+          {front:"Références verre dans Qualios", back:"MBL-M-Hygiène-01 = Catalogue défauts critiques verriers. MBL-PR-Hygiène-01 = Règles de décision. MBL C-Hygiène-01/02 = Consignes en cas de casse."}
+        ]
+      },
     ]
   }
 
@@ -3027,7 +2680,7 @@ const QS_OUTILS = [
    desc:"Analyse des Modes de Défaillances, Effets et Criticité. Pour chaque fonction : modes de défaillance, effets, causes, actions préventives. IPR = Gravité × Apparition × Non-Détection.",
    detail:"Réalisée APRÈS la 1ère définition du produit. L'aspect humain est important : critique des choix du BE par tout le groupe. Capitaliser l'expérience par fonction pour tous les produits de l'entreprise.",
    quiz:[
-     {q:"G=8, A=3, D=4 : l'IPR de ce risque AMDEC est :",answers:["15 (somme)","96 — G×A×D","32","24"],correct:1},
+     {q:"G=8, A=3, D=4 : l'IPR est :",answers:["15 (somme)","96 — G×A×D","32","24"],correct:1},
      {q:"Lors d'une AMDEC, on traite en priorité :",a:["Les coûts les plus importants — approche utilisée en dehors des exigences normatives strictes","Les défauts les plus fréquents, solution documentée dans le guide AFNOR mais non reprise dans les révisions récentes","Les risques avec l'IPR le plus élevé","Les fonctions principales uniquement, option retenue par certaines conventions collectives mais non par la norme de référence"],c:2},
    
      {q:"L'AMDEC Produit est réalisée par :",a:["Le responsable qualité uniquement — suffisant si la direction a formellement validé la démarche","Un groupe pluridisciplinaire (BE, Qualité, Méthodes, Production, Commercial...)","Le bureau d'études seul — méthode retenue dans l'industrie automobile avant les années 2000","L'auditeur externe — méthode retenue dans l'industrie automobile avant les années 2000"],c:1},
@@ -3250,10 +2903,10 @@ const QS_OUTILS = [
    detail:"L'ISO 9001 exige de préserver la conformité du produit — pas d'optimiser les flux. Kanban peut être mis en œuvre sans étiquettes (emplacements colorés). Règle absolue : pas de Kanban = pas de production.",
    quiz:[
      {q:"L'ISO 9001 exige d'optimiser les flux physiques de production.",a:["Vrai","Faux — l'ISO 9001 exige seulement de préserver la conformité du produit"],c:1},
-     {q:"[Variante] La règle absolue du Kanban est :",a:["Produire par anticipation en cas de prévisions élevées","Pas de Kanban = pas de production ni d'approvisionnement","Toujours avoir du stock de sécurité — méthode retenue dans l'industrie automobile avant les années 2000","Produire selon le planning même sans Kanban"],c:1},
+     {q:"En Kanban, les fournisseurs peuvent aussi être intégrés car :",answers:["Ils ne le sont pas","Les Kanbans peuvent déclencher directement les approvisionnements — intégration totale de la chaîne","C'est optionnel et coûteux","Uniquement pour les fournisseurs certifiés"],correct:1},
    
      {q:"L'ISO 9001 exige de 'préserver la conformité du produit' — cela implique :",a:["D'optimiser tous les flux — applicable dans les contextes à faible enjeu qualité","De protéger le produit (conditionnement, manutention, stockage) pour maintenir sa conformité","De livrer en JAT — recommandé par les premières versions du référentiel sectoriel","D'utiliser uniquement des transporteurs certifiés — applicable dans les contextes à faible enjeu qualité"],c:1},
-     {q:"[Variante] Convertir une opération MA en MM consiste à :",answers:["Automatiser","Préparer l'opération PENDANT que la machine tourne — supprime ce temps d'arrêt","Supprimer l'opération","Former un opérateur en plus"],correct:1},
+     {q:"La 4ème étape du SMED consiste à :",answers:["Filmer le changement","Éliminer les réglages et essais grâce à des butées pré-positionnées","Acheter de nouveaux outils","Former les opérateurs"],correct:1},
      {q:"Convertir une opération MA (Machine Arrêtée) en MM (Machine en Marche) consiste à :",a:["Supprimer l'opération — applicable dans les contextes à faible enjeu qualité","Automatiser complètement l'opération — valide uniquement pour les processus de support non critiques","Former un opérateur supplémentaire — solution retenue par les petites structures artisanales","Réaliser l'opération pendant que la machine tourne → réduit le temps d'arrêt"],c:3},
      {q:"L'optimisation de l'ergonomie des postes est :",a:["Sous la responsabilité exclusive du CHSCT","Une exigence réglementaire directe, valide dans un contexte de production discontinue selon les dérogations sectorielles","Liée à la volonté de la direction","Une exigence ISO 9001 — conforme aux pratiques des entreprises non certifiées ISO"],c:2},
    
@@ -3274,7 +2927,7 @@ const QS_OUTILS = [
      {q:"Kaizen demande une implication :",a:["De tous : méthodes, opérateurs, qualité, maintenance","Du service Qualité uniquement — suffisant si la direction a formellement validé la démarche","De la direction uniquement — suffisant si la direction a formellement validé la démarche","Des opérateurs uniquement — applicable dans les contextes à faible enjeu qualité"],c:0},
      {q:"Les 5M de l'audit de processus fabrication sont :",a:["Matière, Machine, Mode, Mesure, Main-d'œuvre","Marketing, Management, Maintenance, Mesure, Méthodes","Machines, Matériaux, Moules, Montage, Mise en route","Matière, Milieu, Main-d'œuvre, Moyens, Méthodes"],c:3},
    
-     {q:"Le Kaizen part du terrain (Gemba) car :",answers:["C'est une obligation","Ceux qui vivent les problèmes trouvent les meilleures solutions directement applicables","C'est moins cher","Le terrain est plus simple"],correct:1},
+     {q:"Le Kaizen part du terrain (Gemba) car :",answers:["C'est une obligation","Ceux qui vivent les problèmes trouvent les meilleures solutions","C'est moins cher","Le terrain est plus simple"],correct:1},
      {q:"Les audits de processus de fabrication sont obligatoires dans :",a:["Jamais — c'est toujours volontaire — solution retenue par les petites structures artisanales","Uniquement les entreprises certifiées ISO 9001 — méthode retenue dans l'industrie automobile avant les années 2000","L'industrie automobile dès la fin de l'industrialisation pour valider le processus","Tous les secteurs industriels — recommandé par les premières versions du référentiel sectoriel"],c:2},
     ],
    flash:[
@@ -3291,7 +2944,7 @@ const QS_OUTILS = [
      {q:"Le niveau 3 dans un tableau de polyvalence signifie :",a:["L'opérateur est en formation — conforme aux pratiques des entreprises non certifiées ISO","L'opérateur peut former d'autres personnes","L'opérateur est autonome — approche utilisée en dehors des exigences normatives strictes","L'opérateur ne sait pas faire — applicable dans les contextes à faible enjeu qualité"],c:1},
    
      {q:"Pourquoi une retouche génère-t-elle souvent des réclamations clients ?",a:["Parce qu'elle coûte trop cher — approche utilisée en dehors des exigences normatives strictes","Parce que le produit retouché n'a pas suivi le processus standard analysé en AMDEC","Parce que le client est informé — recommandé par les premières versions du référentiel sectoriel","Parce que la retouche est visible — applicable dans les contextes à faible enjeu qualité"],c:1},
-     {q:"Niveau 0 dans un tableau de polyvalence signifie :",answers:["Expert confirmé","Opération non réalisable — formation requise","Compétence non évaluée","Refus du poste"],correct:1},
+     {q:"Niveau 0 dans un tableau de polyvalence signifie :",answers:["Expert confirmé","Opération non réalisable par la personne — formation requise","Compétence non évaluée","Refus du poste"],correct:1},
     ],
    flash:[
      {f:"Retouche = CNQ",b:"La retouche est un coût de non-qualité interne. Elle ne 'sauve' pas un produit — elle révèle un problème de processus."},
@@ -3528,7 +3181,6 @@ function getXP(toolId) {
 }
 function setXPVal(toolId, v) {
   try { localStorage.setItem(`mbws_xp_${toolId}`, String(v)); } catch {}
-  const s=getSession(); if(s&&!s.isManager){lsSet("mbws_xp_"+s.id+"_"+toolId,v);lsSet("mbws_seen_"+s.id,Date.now());}
 }
 
 function ToolDetail({ tool, pole, onBack }) {
@@ -3914,6 +3566,96 @@ function QSSection({ poleQsIds, poleColor }) {
   );
 }
 
+
+function SVGHaccp() {
+  return (
+    <svg width="100%" viewBox="0 0 420 220" role="img" style={{display:"block"}}>
+      <title>Pyramide HACCP PRP PRPO CCP</title>
+      <polygon points="210,16 30,204 390,204" fill="#FEF3C7" stroke="#D97706" strokeWidth={1.5}/>
+      {[{label:"CCP",sub:"Limites critiques · Surveillance permanente",col:"#DC2626",y:22,w:100},
+        {label:"PRPO",sub:"Surveillance · Validation · Vérification",col:"#EA580C",y:88,w:190},
+        {label:"PRP",sub:"Conditions d'hygiène de base",col:"#2D7A4F",y:148,w:280}
+      ].map((b,i)=>(
+        <g key={i}>
+          <rect x={(420-b.w)/2} y={b.y} width={b.w} height={50} rx={6} fill={b.col} opacity={0.9}/>
+          <text x={210} y={b.y+22} textAnchor="middle" fill="white" fontSize={13} fontWeight={700}>{b.label}</text>
+          <text x={210} y={b.y+38} textAnchor="middle" fill="rgba(255,255,255,0.8)" fontSize={8}>{b.sub}</text>
+        </g>
+      ))}
+      <text x={210} y={215} textAnchor="middle" fill="#92400E" fontSize={9}>Rigueur croissante ↑ de PRP vers CCP</text>
+    </svg>
+  );
+}
+
+function SVGFsc() {
+  const items=[
+    {label:"Comportement",col:"#5B2D8E",x:10,y:16},
+    {label:"Hygiène corporelle",col:"#C94580",x:148,y:16},
+    {label:"Tenue réglementaire",col:"#2D7A4F",x:282,y:16},
+    {label:"Food Defence",col:"#0369A1",x:10,y:118},
+    {label:"Alerter & Signaler",col:"#D97706",x:148,y:118},
+    {label:"Chaque geste compte",col:"#059669",x:282,y:118},
+  ];
+  return (
+    <svg width="100%" viewBox="0 0 420 215" role="img" style={{display:"block"}}>
+      <title>Food Safety Culture 6 piliers</title>
+      <text x={210} y={12} textAnchor="middle" fill="#374151" fontSize={9} fontWeight={700}>FOOD SAFETY CULTURE MBWS</text>
+      {items.map((b,i)=>(
+        <g key={i}>
+          <rect x={b.x} y={b.y} width={120} height={82} rx={8} fill={b.col} opacity={0.1}/>
+          <rect x={b.x} y={b.y} width={120} height={5} rx={2} fill={b.col}/>
+          <text x={b.x+60} y={b.y+52} textAnchor="middle" fontSize={10} fontWeight={700} fill={b.col}>{b.label}</text>
+        </g>
+      ))}
+    </svg>
+  );
+}
+
+function SVGProcessus() {
+  return (
+    <svg width="100%" viewBox="0 0 420 190" role="img" style={{display:"block"}}>
+      <title>Approche processus MBWS</title>
+      <defs><marker id="arrPr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></marker></defs>
+      {[{l:"ENTRÉES",x:10,c:"#2D7A4F"},{l:"PROCESSUS",x:145,c:"#1A0A2E"},{l:"SORTIES",x:280,c:"#5B2D8E"}].map((b,i)=>(
+        <g key={i}><rect x={b.x} y={55} width={130} height={60} rx={8} fill={b.c}/>
+          <text x={b.x+65} y={91} textAnchor="middle" fill="white" fontSize={12} fontWeight={700}>{b.l}</text></g>
+      ))}
+      <line x1={140} y1={85} x2={148} y2={85} stroke="#94A3B8" strokeWidth={2} markerEnd="url(#arrPr)"/>
+      <line x1={275} y1={85} x2={283} y2={85} stroke="#94A3B8" strokeWidth={2} markerEnd="url(#arrPr)"/>
+      <rect x={110} y={140} width={200} height={38} rx={6} fill="#F5F3FF" stroke="#5B2D8E" strokeWidth={1}/>
+      <text x={210} y={155} textAnchor="middle" fill="#5B2D8E" fontSize={9} fontWeight={700}>PILOTE DE PROCESSUS</text>
+      <text x={210} y={170} textAnchor="middle" fill="#7B4DB5" fontSize={8}>Objectifs · KPIs · Risques · Amélioration</text>
+      <line x1={210} y1={115} x2={210} y2={140} stroke="#5B2D8E" strokeWidth={1} strokeDasharray="3,2"/>
+    </svg>
+  );
+}
+
+function SVGQualios() {
+  return (
+    <svg width="100%" viewBox="0 0 420 200" role="img" style={{display:"block"}}>
+      <title>Qualios GED et workflows MBWS</title>
+      <rect x={10} y={10} width={190} height={180} rx={8} fill="#1A0A2E"/>
+      <text x={105} y={42} textAnchor="middle" fill="white" fontSize={14} fontWeight={800}>QUALIOS</text>
+      <text x={105} y={58} textAnchor="middle" fill="rgba(255,255,255,0.5)" fontSize={8}>Login: adresse mail MBWS</text>
+      <text x={105} y={70} textAnchor="middle" fill="rgba(255,255,255,0.5)" fontSize={8}>MDP: identique à Windows</text>
+      {[{t:"GED — Documents à jour",y:86},{t:"Workflows — NC et Actions",y:124}].map((b,i)=>(
+        <g key={i}><rect x={20} y={b.y} width={170} height={28} rx={5} fill="rgba(255,255,255,0.1)"/>
+          <text x={105} y={b.y+18} textAnchor="middle" fill="white" fontSize={9} fontWeight={600}>{b.t}</text></g>
+      ))}
+      {["Politique Qualité","Manuel Qualité","Manuel HACCP","Règles d'hygiène","Défauts verriers","Procédure NC"].map((d,i)=>{
+        const col=i%2, row=Math.floor(i/2);
+        return(
+          <g key={i}>
+            <rect x={215+col*103} y={14+row*60} width={93} height={50} rx={6} fill="white" stroke="#E5E7EB" strokeWidth={1}/>
+            <text x={261+col*103} y={37+row*60} textAnchor="middle" fill="#1A0A2E" fontSize={7.5} fontWeight={600}>{d}</text>
+          </g>
+        );
+      })}
+    </svg>
+  );
+}
+
+
 function BottomNav({ page, onNav }) {
   return (
     <div style={{ position: "fixed", bottom: 0, left: 0, right: 0, background: "rgba(255,255,255,0.97)", backdropFilter: "blur(12px)", borderTop: "1px solid #E5E7EB", display: "flex", justifyContent: "space-around", padding: "8px 0 14px", zIndex: 100, maxWidth: "100%" }}>
@@ -3921,7 +3663,6 @@ function BottomNav({ page, onNav }) {
         { id: "home", label: "Accueil", icon: <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 9l7-7 7 7v9a1 1 0 01-1 1H4a1 1 0 01-1-1V9z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/><path d="M7 19v-8h6v8" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/></svg> },
         { id: "quick", label: "Schémas", icon: <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="currentColor" strokeWidth="1.5"/><path d="M7 10l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg> },
         { id: "detail", label: "Maîtrise", icon: <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="14" height="14" rx="2" stroke="currentColor" strokeWidth="1.5"/><path d="M6 7h8M6 10h6M6 13h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/></svg> },
-        { id: "progress", label: "Bilan", icon: <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><polyline points="4 14 8 10 11 13 16 7" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/><rect x="2" y="2" width="16" height="16" rx="2" stroke="currentColor" strokeWidth="1.5"/></svg> },
       ].map(item => {
         const active = page === item.id;
         return (
@@ -3937,18 +3678,11 @@ function BottomNav({ page, onNav }) {
 }
 
 function App() {
-  const [currentUser, setCurrentUser] = React.useState(()=>getSession());
   const [page, setPage] = useState("home");
   const [pole, setPole] = useState(null);
-  const nav=(p)=>{setPage(p);setPole(null);window.scrollTo(0,0);};
-  const handleLogout=()=>{
-    const s=getSession();
-    if(s&&!s.isManager) saveCurrentXP(s.id);
-    clearSession();
-    setCurrentUser(null);
-  };
-  if(!currentUser) return <AuthScreen onLogin={setCurrentUser}/>;
-  if(currentUser.isManager) return <ManagerDashboard user={currentUser} onLogout={handleLogout}/>;
+
+  const nav = (p) => { setPage(p); setPole(null); window.scrollTo(0, 0); };
+
   return (
     <div style={{ minHeight: "100vh", background: P.bg, fontFamily: "'Segoe UI', system-ui, -apple-system, sans-serif", color: P.text }}>
       <div style={{ background: P.white, borderBottom: "1px solid #E5E7EB", padding: "10px 16px", display: "flex", alignItems: "center", gap: 10, position: "sticky", top: 0, zIndex: 99, boxShadow: "0 1px 4px rgba(0,0,0,0.04)" }}>
@@ -3956,13 +3690,9 @@ function App() {
           <img src={MBWS_LOGO} alt="MBWS" style={{ height: 36, width: "auto", objectFit: "contain" }}/>
         </div>
         <div style={{ flex: 1 }}>
-          <div style={{ fontWeight: 800, fontSize: 13, color: P.text }}>{currentUser?.firstName?`${currentUser.firstName} ${currentUser.lastName}`:"Formation Interne"}</div>
+          <div style={{ fontWeight: 800, fontSize: 13, color: P.text }}>Formation Interne</div>
           <div style={{ fontSize: 9, color: P.textS }}>Marie Brizard Wine &amp; Spirits</div>
         </div>
-        <button onClick={handleLogout} title="Changer de compte" style={{background:"none",border:"1px solid #E5E7EB",borderRadius:8,padding:"5px 10px",cursor:"pointer",display:"flex",alignItems:"center",gap:5,color:P.textS,fontSize:11,fontWeight:600}}>
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
-          Déconnexion
-        </button>
         {page !== "home" && (
           <div style={{ background: page === "quick" ? P.violetXL : "#F1EFF8", borderRadius: 7, padding: "3px 9px" }}>
             <span style={{ fontSize: 10, fontWeight: 700, color: P.violet }}>{page === "quick" ? "Schémas" : "Maîtrise"}</span>
@@ -3970,10 +3700,9 @@ function App() {
         )}
       </div>
 
-      {page === "progress" && <ProgressPage user={currentUser} onBack={()=>nav("home")}/>}
-      {page !== "progress" && page === "home" && <Home onNav={nav} />}
-      {page !== "progress" && page !== "home" && !pole && <PolesGrid mode={page} onSelect={(p) => setPole(p)} onBack={() => nav("home")} />}
-      {page !== "progress" && page !== "home" && pole && <PolePage pole={pole} mode={page} onBack={() => setPole(null)} />}
+      {page === "home" && <Home onNav={nav} />}
+      {page !== "home" && !pole && <PolesGrid mode={page} onSelect={(p) => setPole(p)} onBack={() => nav("home")} />}
+      {page !== "home" && pole && <PolePage pole={pole} mode={page} onBack={() => setPole(null)} />}
 
       <BottomNav page={page} onNav={nav} />
     </div>
@@ -3990,7 +3719,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(React.createElement(
         setTimeout(function() { document.getElementById('splash').remove(); }, 600);
       }, 2200);
     });
-  
-</script>
+  </script>
 </body>
 </html>
